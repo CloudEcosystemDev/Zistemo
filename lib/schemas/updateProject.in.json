@@ -1,0 +1,266 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "customer_id",
+                "manager_id",
+                "billing_method_id"
+            ],
+            "properties": {
+                "customer_id": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "manager_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "billing_method_id": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "flat_amount": {
+                    "type": "number"
+                },
+                "rate": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "prefix": {
+                    "type": "string"
+                },
+                "is_budgeted": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "start_date": {
+                    "type": "string"
+                },
+                "end_date": {
+                    "type": "string"
+                },
+                "budget_hours": {
+                    "type": "number"
+                },
+                "budget_cost": {
+                    "type": "number"
+                },
+                "project_budget_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "mileage_rate": {
+                    "type": "number"
+                },
+                "number": {
+                    "type": "string"
+                },
+                "allow_adjustment": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "adjustment": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "custom_fields": {
+                    "type": "object",
+                    "title": "Custom Fields",
+                    "example": {
+                        "3": "cf1 new",
+                        "4": "cf2 new",
+                        "5": "cf3 new"
+                    }
+                },
+                "tasks": {
+                    "type": "object",
+                    "properties": {
+                        "48": {
+                            "type": "object",
+                            "properties": {
+                                "task_id": {
+                                    "type": "integer",
+                                    "example": 48
+                                },
+                                "group_id": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "rate": {
+                                    "type": "number"
+                                },
+                                "budget": {
+                                    "type": "number"
+                                },
+                                "position": {
+                                    "type": "integer",
+                                    "example": 3
+                                },
+                                "billable": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "new_group_id": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "new_task_1": {
+                            "type": "object",
+                            "properties": {
+                                "task_id": {
+                                    "type": "integer",
+                                    "example": 47
+                                },
+                                "group_id": {
+                                    "type": "integer",
+                                    "example": 44
+                                },
+                                "rate": {
+                                    "type": "number"
+                                },
+                                "budget": {
+                                    "type": "number"
+                                },
+                                "position": {
+                                    "type": "integer",
+                                    "example": 4
+                                },
+                                "billable": {
+                                    "type": "integer",
+                                    "example": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "groups": {
+                    "type": "object",
+                    "properties": {
+                        "44": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "position": {
+                                    "type": "integer",
+                                    "example": 1
+                                }
+                            }
+                        },
+                        "new_1": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "position": {
+                                    "type": "integer",
+                                    "example": 2
+                                }
+                            }
+                        }
+                    }
+                },
+                "users": {
+                    "type": "object",
+                    "properties": {
+                        "temp_id_1": {
+                            "type": "object",
+                            "properties": {
+                                "user_id": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "rate": {
+                                    "type": "number"
+                                },
+                                "budget": {
+                                    "type": "number"
+                                }
+                            }
+                        },
+                        "temp_id_2": {
+                            "type": "object",
+                            "properties": {
+                                "user_id": {
+                                    "type": "integer",
+                                    "example": 2
+                                },
+                                "rate": {
+                                    "type": "number"
+                                },
+                                "budget": {
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tasks_to_delete": {
+                    "type": "array",
+                    "items": {
+                        "title": "Task to delete",
+                        "properties": {
+                            "group_id": {
+                                "type": "integer",
+                                "example": 1
+                            },
+                            "task_id": {
+                                "type": "integer",
+                                "example": 2
+                            }
+                        }
+                    }
+                },
+                "groups_to_delete": {
+                    "type": "array",
+                    "example": [
+                        10,
+                        17
+                    ],
+                    "items": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "users_to_delete": {
+                    "type": "array",
+                    "example": [
+                        2,
+                        3
+                    ],
+                    "items": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            }
+        }
+    }
+}

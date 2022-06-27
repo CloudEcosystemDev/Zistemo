@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of category",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        }
+    }
+}

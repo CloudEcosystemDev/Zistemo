@@ -1,0 +1,94 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "allow_edit_sent_doc": {
+                    "description": "Allow editing sent invoices. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "allow_edit_approved_estimate": {
+                    "description": "Allow editing approved estimates. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "is_show_title": {
+                    "description": "Show invoice/estimate title in preview. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "allow_manual_doc_number": {
+                    "description": "Allow editing invoice/estimate number. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "is_delivery_note": {
+                    "description": "Tasks and Items on the delivery note. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "is_packing_slip": {
+                    "description": "Tasks and Items on the packing slip. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "cc_estimate": {
+                    "description": "Always CC me on estimates. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "cc_invoice": {
+                    "description": "Always CC me on invoices. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "cc_reminder": {
+                    "description": "Always CC me on estimates. 0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "logo_text": {
+                    "description": "This text will appear below your logo on invoices and estimates",
+                    "type": "string"
+                },
+                "welcome_client": {
+                    "description": "Welcome message to appear on client's dashboard",
+                    "type": "string"
+                },
+                "welcome_staff": {
+                    "description": "Welcome message to appear on staff member's dashboard",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

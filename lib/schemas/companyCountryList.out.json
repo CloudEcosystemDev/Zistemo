@@ -1,0 +1,26 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 228
+            },
+            "code": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "language_id": {
+                "type": "integer",
+                "example": 1
+            },
+            "address_type": {
+                "type": "integer",
+                "example": 2
+            }
+        }
+    }
+}

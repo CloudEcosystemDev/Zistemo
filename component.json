@@ -1,0 +1,3105 @@
+{
+    "title": "Zistemo API specs.",
+    "description": "Zistemo API",
+    "docsUrl": "",
+    "url": "https://api.zistemo.com/{account}",
+    "envVars": {
+        "OAUTH_CLIENT_ID": {
+            "description": "OAuth Client ID"
+        },
+        "OAUTH_CLIENT_SECRET": {
+            "description": "OAuth Client Secret"
+        }
+    },
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.zistemo.com/{account}",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "oauth2": {
+                "label": "OAuth2",
+                "viewClass": "OAuthFieldView"
+            },
+            "auth_api_dev_key": {
+                "label": "api_dev_key (api_dev_key)",
+                "viewClass": "TextFieldView"
+            },
+            "auth_token": {
+                "label": "token (token)",
+                "viewClass": "TextFieldView"
+            },
+            "auth_x_api_dev_key": {
+                "label": "api_dev_key (x_api_dev_key)",
+                "viewClass": "TextFieldView"
+            }
+        },
+        "oauth2": {
+            "client_id": "{{OAUTH_CLIENT_ID}}",
+            "client_secret": "{{OAUTH_CLIENT_SECRET}}",
+            "auth_uri": "https://api.zistemo.com/[tenant]/login",
+            "token_uri": "https://api.zistemo.com/[tenant]/login",
+            "scopes": []
+        }
+    },
+    "triggers": {
+        "lookup": {
+            "main": "./lib/lookups/lookup.js",
+            "title": "Function to run a lookup",
+            "description": "Function to call an internal trigger or action"
+        },
+        "getItemList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get item list",
+            "description": "",
+            "callParams": {
+                "pathName": "/items",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getItemList.in.json",
+                "out": "./lib/schemas/getItemList.out.json"
+            }
+        },
+        "getVendorList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get vendor list",
+            "callParams": {
+                "pathName": "/vendor",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getVendorList.in.json",
+                "out": "./lib/schemas/getVendorList.out.json"
+            }
+        },
+        "getVendorLogo": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Vendor logo",
+            "description": "Returns vendor logo",
+            "callParams": {
+                "pathName": "/vendor/{id}/logo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getVendorLogo.in.json",
+                "out": "./lib/schemas/getVendorLogo.out.json"
+            }
+        },
+        "defaultVendorData": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get default data",
+            "description": "",
+            "callParams": {
+                "pathName": "/vendor/defaults",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/defaultVendorData.in.json",
+                "out": "./lib/schemas/defaultVendorData.out.json"
+            }
+        },
+        "getAllInactiveTeams": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get inactive teams",
+            "description": "",
+            "callParams": {
+                "pathName": "/teams/inactive",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAllInactiveTeams.in.json",
+                "out": "./lib/schemas/getAllInactiveTeams.out.json"
+            }
+        },
+        "getUnitList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get unit list",
+            "description": "Units",
+            "callParams": {
+                "pathName": "/units",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUnitList.in.json",
+                "out": "./lib/schemas/getUnitList.out.json"
+            }
+        },
+        "getClientList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get client list",
+            "callParams": {
+                "pathName": "/clients",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getClientList.in.json",
+                "out": "./lib/schemas/getClientList.out.json"
+            }
+        },
+        "getClientLogo": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Client logo",
+            "description": "Returns client logo",
+            "callParams": {
+                "pathName": "/clients/{id}/logo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getClientLogo.in.json",
+                "out": "./lib/schemas/getClientLogo.out.json"
+            }
+        },
+        "defaultTeam": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Defaults Data",
+            "description": "",
+            "callParams": {
+                "pathName": "/team/defaults",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/defaultTeam.in.json",
+                "out": "./lib/schemas/defaultTeam.out.json"
+            }
+        },
+        "getInvoicePdf": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get an invoice PDF",
+            "description": "",
+            "callParams": {
+                "pathName": "/invoice/{id}/pdf",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInvoicePdf.in.json",
+                "out": "./lib/schemas/getInvoicePdf.out.json"
+            }
+        },
+        "getDefaultClients": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get default data",
+            "callParams": {
+                "pathName": "/clients/defaults",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getDefaultClients.in.json",
+                "out": "./lib/schemas/getDefaultClients.out.json"
+            }
+        },
+        "gettingStarted": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Getting Started",
+            "description": "Zistemo API is a RESTful interface, providing programmatic access to much of the data in the system. It provides predictable URLs to access resources and uses built-in HTTP features to receive commands and return responses. This makes it easy to communicate with from a wide variety of environments, from command-line utilities to gadgets to the browser URL bar itself.\r\nThe API accepts only JSON content in requests and returns JSON content in all of its responses, including errors. Only the UTF-8 character encoding is supported for both requests and responses.",
+            "callParams": {
+                "pathName": "/#",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/gettingStarted.in.json",
+                "out": "./lib/schemas/gettingStarted.out.json"
+            }
+        },
+        "getAllTeams": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get active teams",
+            "description": "",
+            "callParams": {
+                "pathName": "/teams",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAllTeams.in.json",
+                "out": "./lib/schemas/getAllTeams.out.json"
+            }
+        },
+        "getInvoiceList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get invoice list",
+            "description": "",
+            "callParams": {
+                "pathName": "/invoices",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInvoiceList.in.json",
+                "out": "./lib/schemas/getInvoiceList.out.json"
+            }
+        },
+        "getEstimateListPaginated": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get estimates list with pagination",
+            "description": "",
+            "callParams": {
+                "pathName": "/estimates/list",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getEstimateListPaginated.in.json",
+                "out": "./lib/schemas/getEstimateListPaginated.out.json"
+            }
+        },
+        "getUserList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get user list",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/list",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserList.in.json",
+                "out": "./lib/schemas/getUserList.out.json"
+            }
+        },
+        "getUserLogo": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get User logo",
+            "description": "Returns user logo",
+            "callParams": {
+                "pathName": "/user/{id}/logo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUserLogo.in.json",
+                "out": "./lib/schemas/getUserLogo.out.json"
+            }
+        },
+        "getCurrentUserLogo": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get Current User logo",
+            "description": "Returns user logo",
+            "callParams": {
+                "pathName": "/user/current/logo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCurrentUserLogo.in.json",
+                "out": "./lib/schemas/getCurrentUserLogo.out.json"
+            }
+        },
+        "getInvoiceListPaginated": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get invoice list with pagination",
+            "description": "",
+            "callParams": {
+                "pathName": "/invoices/list",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInvoiceListPaginated.in.json",
+                "out": "./lib/schemas/getInvoiceListPaginated.out.json"
+            }
+        },
+        "getCurrentUser": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get current user",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/current",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCurrentUser.in.json",
+                "out": "./lib/schemas/getCurrentUser.out.json"
+            }
+        },
+        "getIPaymentsList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get payments list",
+            "description": "",
+            "callParams": {
+                "pathName": "/invoices/payments",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getIPaymentsList.in.json",
+                "out": "./lib/schemas/getIPaymentsList.out.json"
+            }
+        },
+        "userDefaults": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get user default settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/defaults",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/userDefaults.in.json",
+                "out": "./lib/schemas/userDefaults.out.json"
+            }
+        },
+        "userLeaveDefaults": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get user leave default settings",
+            "description": "Get available leave types, substitute staff members list and valid day parts",
+            "callParams": {
+                "pathName": "/attendance/leave-defaults",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/userLeaveDefaults.in.json",
+                "out": "./lib/schemas/userLeaveDefaults.out.json"
+            }
+        },
+        "getTimeTickets": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get time tickets list",
+            "description": "",
+            "callParams": {
+                "pathName": "/time-tickets",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTimeTickets.in.json",
+                "out": "./lib/schemas/getTimeTickets.out.json"
+            }
+        },
+        "currencyList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get currency list",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/currencyList.in.json",
+                "out": "./lib/schemas/currencyList.out.json"
+            }
+        },
+        "userAttendanceStatus": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get current user attendance status",
+            "description": "",
+            "callParams": {
+                "pathName": "/dashboard/attendance-status",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/userAttendanceStatus.in.json",
+                "out": "./lib/schemas/userAttendanceStatus.out.json"
+            }
+        },
+        "getEstimatePdf": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get an estimate PDF",
+            "description": "",
+            "callParams": {
+                "pathName": "/estimates/{id}/pdf",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getEstimatePdf.in.json",
+                "out": "./lib/schemas/getEstimatePdf.out.json"
+            }
+        },
+        "getLeaves": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get user leaves list",
+            "description": "",
+            "callParams": {
+                "pathName": "/attendance/leaves",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLeaves.in.json",
+                "out": "./lib/schemas/getLeaves.out.json"
+            }
+        },
+        "notconfiguredCurrencyList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get list of not configured currencies",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency/notconfigured",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/notconfiguredCurrencyList.in.json",
+                "out": "./lib/schemas/notconfiguredCurrencyList.out.json"
+            }
+        },
+        "projectBillingMethods": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get billing methods",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/billingmethods",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/projectBillingMethods.in.json",
+                "out": "./lib/schemas/projectBillingMethods.out.json"
+            }
+        },
+        "getTaskAssignment": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get project tasks assignment",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}/task-assignment",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTaskAssignment.in.json",
+                "out": "./lib/schemas/getTaskAssignment.out.json"
+            }
+        },
+        "projectClientsList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get clients list",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/clients",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/projectClientsList.in.json",
+                "out": "./lib/schemas/projectClientsList.out.json"
+            }
+        },
+        "getExpenseList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get expense list",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExpenseList.in.json",
+                "out": "./lib/schemas/getExpenseList.out.json"
+            }
+        },
+        "projectBudgetMethods": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get budget methods",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/budgetmethods",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/projectBudgetMethods.in.json",
+                "out": "./lib/schemas/projectBudgetMethods.out.json"
+            }
+        },
+        "getExpenseReceipt": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get a receipt",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/{id}/receipt",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExpenseReceipt.in.json",
+                "out": "./lib/schemas/getExpenseReceipt.out.json"
+            }
+        },
+        "projectStaffList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get staff list",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/users",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/projectStaffList.in.json",
+                "out": "./lib/schemas/projectStaffList.out.json"
+            }
+        },
+        "getExpenseSubCategories": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get expense categories",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExpenseSubCategories.in.json",
+                "out": "./lib/schemas/getExpenseSubCategories.out.json"
+            }
+        },
+        "getExchangeRate": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get exchange rate",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency/{id}/rate",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExchangeRate.in.json",
+                "out": "./lib/schemas/getExchangeRate.out.json"
+            }
+        },
+        "getExpenseSubCategory": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get expense sub-category",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories/{id}/sub",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExpenseSubCategory.in.json",
+                "out": "./lib/schemas/getExpenseSubCategory.out.json"
+            }
+        },
+        "getExpenseProjects": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get active projects",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/projects",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExpenseProjects.in.json",
+                "out": "./lib/schemas/getExpenseProjects.out.json"
+            }
+        },
+        "getTimerStatus": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get timer status",
+            "description": "",
+            "callParams": {
+                "pathName": "/timer/status",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTimerStatus.in.json",
+                "out": "./lib/schemas/getTimerStatus.out.json"
+            }
+        },
+        "getProjectTasks": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get task list for selected project",
+            "description": "",
+            "callParams": {
+                "pathName": "/timer/project/{id}/tasks",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProjectTasks.in.json",
+                "out": "./lib/schemas/getProjectTasks.out.json"
+            }
+        },
+        "currencyFormats": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get currency format list",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency/formats",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/currencyFormats.in.json",
+                "out": "./lib/schemas/currencyFormats.out.json"
+            }
+        },
+        "getTimerProjects": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get projects for current user",
+            "description": "",
+            "callParams": {
+                "pathName": "/timer/projects",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTimerProjects.in.json",
+                "out": "./lib/schemas/getTimerProjects.out.json"
+            }
+        },
+        "projectTaskList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get task list",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/tasks",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/projectTaskList.in.json",
+                "out": "./lib/schemas/projectTaskList.out.json"
+            }
+        },
+        "projectList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get project list",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/projectList.in.json",
+                "out": "./lib/schemas/projectList.out.json"
+            }
+        },
+        "mileageClientsList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get clients list",
+            "description": "",
+            "callParams": {
+                "pathName": "/mileage/clients",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/mileageClientsList.in.json",
+                "out": "./lib/schemas/mileageClientsList.out.json"
+            }
+        },
+        "mileageProjectList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get project list for selected client",
+            "description": "",
+            "callParams": {
+                "pathName": "/mileage/projects",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/mileageProjectList.in.json",
+                "out": "./lib/schemas/mileageProjectList.out.json"
+            }
+        },
+        "getMileageList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get mileage list",
+            "description": "",
+            "callParams": {
+                "pathName": "/mileage",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getMileageList.in.json",
+                "out": "./lib/schemas/getMileageList.out.json"
+            }
+        },
+        "timeDetailsChosenWeek": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get time tracking details for chosen week",
+            "description": "",
+            "callParams": {
+                "pathName": "/approval/week",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timeDetailsChosenWeek.in.json",
+                "out": "./lib/schemas/timeDetailsChosenWeek.out.json"
+            }
+        },
+        "timesheetCalendarView": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get data for calendar view",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet/monthly",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timesheetCalendarView.in.json",
+                "out": "./lib/schemas/timesheetCalendarView.out.json"
+            }
+        },
+        "companyStaffList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get company staff members list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/users",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyStaffList.in.json",
+                "out": "./lib/schemas/companyStaffList.out.json"
+            }
+        },
+        "companyNumberFormatList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get number format list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/numberformats",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyNumberFormatList.in.json",
+                "out": "./lib/schemas/companyNumberFormatList.out.json"
+            }
+        },
+        "companyLanguageList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get language list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/languages",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyLanguageList.in.json",
+                "out": "./lib/schemas/companyLanguageList.out.json"
+            }
+        },
+        "companyTimezoneList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get timezone list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/timezones",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyTimezoneList.in.json",
+                "out": "./lib/schemas/companyTimezoneList.out.json"
+            }
+        },
+        "companyStartDayList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Choose the 'weeks starts with' day",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/weekdays",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyStartDayList.in.json",
+                "out": "./lib/schemas/companyStartDayList.out.json"
+            }
+        },
+        "companyDateFormatList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get date format list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/dateformats",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyDateFormatList.in.json",
+                "out": "./lib/schemas/companyDateFormatList.out.json"
+            }
+        },
+        "projectDefaults": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get default values",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/defaults",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/projectDefaults.in.json",
+                "out": "./lib/schemas/projectDefaults.out.json"
+            }
+        },
+        "companyBankInfo": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get a company bank info",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/bankinfo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyBankInfo.in.json",
+                "out": "./lib/schemas/companyBankInfo.out.json"
+            }
+        },
+        "companyLogo": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get a company logo",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/logo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyLogo.in.json",
+                "out": "./lib/schemas/companyLogo.out.json"
+            }
+        },
+        "getTaskList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get task list",
+            "description": "",
+            "callParams": {
+                "pathName": "/tasks",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTaskList.in.json",
+                "out": "./lib/schemas/getTaskList.out.json"
+            }
+        },
+        "timesheetUserData": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get list of user time entries",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet/list",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timesheetUserData.in.json",
+                "out": "./lib/schemas/timesheetUserData.out.json"
+            }
+        },
+        "companyCurrencyList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get currency list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/currencies",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyCurrencyList.in.json",
+                "out": "./lib/schemas/companyCurrencyList.out.json"
+            }
+        },
+        "companyTemplatePreview": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get template preview image",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/template/{id}/logo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyTemplatePreview.in.json",
+                "out": "./lib/schemas/companyTemplatePreview.out.json"
+            }
+        },
+        "companyTaxInfo": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get a company tax ID and registration Number",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/taxinfo",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyTaxInfo.in.json",
+                "out": "./lib/schemas/companyTaxInfo.out.json"
+            }
+        },
+        "companyGetTemplates": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get template list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/templates",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyGetTemplates.in.json",
+                "out": "./lib/schemas/companyGetTemplates.out.json"
+            }
+        },
+        "companyTimeFormatList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get time format list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/timeformats",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyTimeFormatList.in.json",
+                "out": "./lib/schemas/companyTimeFormatList.out.json"
+            }
+        },
+        "companyGetTerms": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get terms list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/terms",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyGetTerms.in.json",
+                "out": "./lib/schemas/companyGetTerms.out.json"
+            }
+        },
+        "companyGetValidForList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get 'valid for' list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/validfor",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyGetValidForList.in.json",
+                "out": "./lib/schemas/companyGetValidForList.out.json"
+            }
+        },
+        "companyGetTemplateSettings": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get company template settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/template",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyGetTemplateSettings.in.json",
+                "out": "./lib/schemas/companyGetTemplateSettings.out.json"
+            }
+        },
+        "companyGetTaxes": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get a simple and group taxes list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/taxes",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyGetTaxes.in.json",
+                "out": "./lib/schemas/companyGetTaxes.out.json"
+            }
+        },
+        "getPaymentGateways": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get payment gateways settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/gateways",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPaymentGateways.in.json",
+                "out": "./lib/schemas/getPaymentGateways.out.json"
+            }
+        },
+        "mileageDefaults": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get default values",
+            "description": "",
+            "callParams": {
+                "pathName": "/mileage/defaults",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/mileageDefaults.in.json",
+                "out": "./lib/schemas/mileageDefaults.out.json"
+            }
+        },
+        "timesheetProjectList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get list of active projects for user",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet/projects",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timesheetProjectList.in.json",
+                "out": "./lib/schemas/timesheetProjectList.out.json"
+            }
+        },
+        "timesheetTaskList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get task list for selected project",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet/{id}/tasks",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timesheetTaskList.in.json",
+                "out": "./lib/schemas/timesheetTaskList.out.json"
+            }
+        },
+        "getPaypalSettings": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get paypal settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/gateways/paypal",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPaypalSettings.in.json",
+                "out": "./lib/schemas/getPaypalSettings.out.json"
+            }
+        },
+        "getCompanyProfile": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get company profile",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/profile",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCompanyProfile.in.json",
+                "out": "./lib/schemas/getCompanyProfile.out.json"
+            }
+        },
+        "getNumberGroups": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get number groups list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/number-groups",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getNumberGroups.in.json",
+                "out": "./lib/schemas/getNumberGroups.out.json"
+            }
+        },
+        "getStripeSettings": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get stripe settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/gateways/stripe",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getStripeSettings.in.json",
+                "out": "./lib/schemas/getStripeSettings.out.json"
+            }
+        },
+        "companyCountryList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get country list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/countries",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyCountryList.in.json",
+                "out": "./lib/schemas/companyCountryList.out.json"
+            }
+        },
+        "companyAddress": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get a company address",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/address",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyAddress.in.json",
+                "out": "./lib/schemas/companyAddress.out.json"
+            }
+        },
+        "timesheetUserList": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get user list",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet/users",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timesheetUserList.in.json",
+                "out": "./lib/schemas/timesheetUserList.out.json"
+            }
+        },
+        "companyPreferences": {
+            "main": "./lib/triggers/trigger.js",
+            "title": "Get a company preferences",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/preferences",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyPreferences.in.json",
+                "out": "./lib/schemas/companyPreferences.out.json"
+            }
+        }
+    },
+    "actions": {
+        "internationalization": {
+            "main": "./lib/actions/action.js",
+            "title": "Internationalization",
+            "description": "The language function (?app_language) returns all messages of this action in a specific language.<br/>If ?app_language is not set than all retuning messages are in English. Each REST API request should include the language function like <code>https://api.zistemo.com/[tenant]/{action}?api_dev_key={key}&app_language=en</code> - [tenant] - your zistemo.com subdomain {action} - action like country, client, expense, login, vendor ...<br/>For example: when you ask for a list of countries use <code>https://api.zistemo.com/[tenant]/settings/countries?api_dev_key={key}</code> and you receive a list with all countries in English as default if you want them in German than add <code>?app_language=de</code>.<br/>For example: <code>https://api.zistemo.com/[tenant]/projects/billingmethods?api_dev_key={key}</code> returns the billing methods in English as default <code>https://api.zistemo.com/[tenant]/projects/billingmethods?api_dev_key={key}?app_language=de</code> returns the billing methods in German while <code>https://api.zistemo.com/[tenant]/projects/billingmethods?api_dev_key={key}?app_language=fr</code> returns the billing methods in France.<br/><br/>Available languages:<br/>* 'en' for English (default)<br/>* 'de' for Germany<br/>* 'es' for Spain<br/>* 'fr' for France<br/>* 'it' for Italy<br/>* 'pl' for Poland<br/>* 'cs' for Czech Republic<br/>* 'pt' for Portugal<br/>* 'ru' for Russia<br/>* 'ua' for Ukraine",
+            "callParams": {
+                "pathName": "/#",
+                "method": "put"
+            },
+            "metadata": {
+                "in": "./lib/schemas/internationalization.in.json",
+                "out": "./lib/schemas/internationalization.out.json"
+            }
+        },
+        "authentication": {
+            "main": "./lib/actions/action.js",
+            "title": "Authentication",
+            "description": "You always need to add your private API Developer Key to have access to the API.<br/>Keep the API Developer Key private like as all other credentials.<br/>You find your API Developer Key on your [profile](https://moneypenny.me/knowledge-base/content/api-info/)<br/><br/><b>Token based Authentication</b><br/>To get access token: call <code>POST https://api.zistemo.com/[tenant]/login?api_dev_key={key}</code> with the params:<br/><code>email</code> - your email or username<br/><code>password</code> - your password<br/>Full call for CURL is:<br/><code>curl -d \"email={email}&password={password}\" -X POST https://api.zistemo.com/[tenant]/login?api_dev_key={key}</code> or <br/><code>curl -d \"email={email}&password={password}\" -H \"api_dev_key:{key}\" -X POST https://api.zistemo.com/[tenant]/login</code></br></br>The returned access token is valid for two hours. You need to use the returned access token for all API calls:<br/>* to the header parameter \"Authorization\" with the value of the access token, for example \"Authorization = Bearer [access token]\".<br/><code>curl -H \"api_dev_key:{key}\" -H \"Authorization: Bearer {access token}\"  -X GET https://api.zistemo.com/{account}/settings/countries</code><br/>* or as a URL parameter like:<br/><code>GET https://api.zistemo.com/{account}/settings/countries?token={access_token}?api_dev_key={key}</code><br/>Each REST API request should include the <code>api_dev_key</code> parameter https://api.zistemo.com/[tenant]/{action}?api_dev_key={key}, or the request header parameter <code>api_dev_key</code> with your api development key.",
+            "callParams": {
+                "pathName": "/#",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/authentication.in.json",
+                "out": "./lib/schemas/authentication.out.json"
+            }
+        },
+        "createUnit": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a new unit",
+            "description": "Creates new unit",
+            "callParams": {
+                "pathName": "/units",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createUnit.in.json",
+                "out": "./lib/schemas/createUnit.out.json"
+            }
+        },
+        "markTaskDeleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark task as deleted",
+            "description": "Change task status into deleted",
+            "callParams": {
+                "pathName": "/task/{id}/deleted",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markTaskDeleted.in.json",
+                "out": "./lib/schemas/markTaskDeleted.out.json"
+            }
+        },
+        "updateTask": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a task",
+            "description": "Update a task",
+            "callParams": {
+                "pathName": "/task/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateTask.in.json",
+                "out": "./lib/schemas/updateTask.out.json"
+            }
+        },
+        "getTask": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a task",
+            "description": "Returns task details",
+            "callParams": {
+                "pathName": "/task/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTask.in.json",
+                "out": "./lib/schemas/getTask.out.json"
+            }
+        },
+        "createItem": {
+            "main": "./lib/actions/action.js",
+            "title": "Create an item",
+            "description": "Creates new item",
+            "callParams": {
+                "pathName": "/item",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createItem.in.json",
+                "out": "./lib/schemas/createItem.out.json"
+            }
+        },
+        "updateItem": {
+            "main": "./lib/actions/action.js",
+            "title": "Update an item",
+            "description": "Update item details",
+            "callParams": {
+                "pathName": "/item/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateItem.in.json",
+                "out": "./lib/schemas/updateItem.out.json"
+            }
+        },
+        "markItemArchived": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark item as archive",
+            "description": "Change item status into archived",
+            "callParams": {
+                "pathName": "/item/{id}/archived",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markItemArchived.in.json",
+                "out": "./lib/schemas/markItemArchived.out.json"
+            }
+        },
+        "updateUnit": {
+            "main": "./lib/actions/action.js",
+            "title": "Update an unit",
+            "description": "Update task",
+            "callParams": {
+                "pathName": "/units/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateUnit.in.json",
+                "out": "./lib/schemas/updateUnit.out.json"
+            }
+        },
+        "deleteUnit": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete an unit",
+            "description": "Delete an unit",
+            "callParams": {
+                "pathName": "/units/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteUnit.in.json",
+                "out": "./lib/schemas/deleteUnit.out.json"
+            }
+        },
+        "updateVendor": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a vendor",
+            "description": "Update vendor",
+            "callParams": {
+                "pathName": "/vendor/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateVendor.in.json",
+                "out": "./lib/schemas/updateVendor.out.json"
+            }
+        },
+        "createVendor": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a vendor",
+            "description": "Creates a vendor",
+            "callParams": {
+                "pathName": "/vendor",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createVendor.in.json",
+                "out": "./lib/schemas/createVendor.out.json"
+            }
+        },
+        "createTask": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a new Task",
+            "description": "Creates new task",
+            "callParams": {
+                "pathName": "/task",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createTask.in.json",
+                "out": "./lib/schemas/createTask.out.json"
+            }
+        },
+        "updateVendorLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Add/change vendor logo",
+            "description": "",
+            "callParams": {
+                "pathName": "/vendor/{id}/logo",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateVendorLogo.in.json",
+                "out": "./lib/schemas/updateVendorLogo.out.json"
+            }
+        },
+        "markVendorActive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark Vendor as active",
+            "description": "Mark vendor as active",
+            "callParams": {
+                "pathName": "/vendor/{id}/active",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markVendorActive.in.json",
+                "out": "./lib/schemas/markVendorActive.out.json"
+            }
+        },
+        "markTaskActive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark task as active",
+            "description": "Change task status into active",
+            "callParams": {
+                "pathName": "/task/{id}/active",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markTaskActive.in.json",
+                "out": "./lib/schemas/markTaskActive.out.json"
+            }
+        },
+        "deleteVendorLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete Vendor logo",
+            "description": "Deletes vendor logo",
+            "callParams": {
+                "pathName": "/vendor/{id}/logo",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteVendorLogo.in.json",
+                "out": "./lib/schemas/deleteVendorLogo.out.json"
+            }
+        },
+        "updateTeam": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a team",
+            "description": "",
+            "callParams": {
+                "pathName": "/team/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateTeam.in.json",
+                "out": "./lib/schemas/updateTeam.out.json"
+            }
+        },
+        "markVendorDeleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark Vendor as deleted",
+            "description": "Mark vendor as deleted",
+            "callParams": {
+                "pathName": "/vendor/{id}/deleted",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markVendorDeleted.in.json",
+                "out": "./lib/schemas/markVendorDeleted.out.json"
+            }
+        },
+        "deactivateTeam": {
+            "main": "./lib/actions/action.js",
+            "title": "Deactivate a team",
+            "description": "",
+            "callParams": {
+                "pathName": "/team/{id}/deactivate",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deactivateTeam.in.json",
+                "out": "./lib/schemas/deactivateTeam.out.json"
+            }
+        },
+        "getItem": {
+            "main": "./lib/actions/action.js",
+            "title": "Get an item",
+            "description": "Returns item details",
+            "callParams": {
+                "pathName": "/item/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getItem.in.json",
+                "out": "./lib/schemas/getItem.out.json"
+            }
+        },
+        "markItemActive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark item as active",
+            "description": "Change item status into active",
+            "callParams": {
+                "pathName": "/item/{id}/active",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markItemActive.in.json",
+                "out": "./lib/schemas/markItemActive.out.json"
+            }
+        },
+        "createClient": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a client",
+            "description": "Create client",
+            "callParams": {
+                "pathName": "/clients",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createClient.in.json",
+                "out": "./lib/schemas/createClient.out.json"
+            }
+        },
+        "activateTeam": {
+            "main": "./lib/actions/action.js",
+            "title": "Activate a team",
+            "description": "",
+            "callParams": {
+                "pathName": "/team/{id}/activate",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/activateTeam.in.json",
+                "out": "./lib/schemas/activateTeam.out.json"
+            }
+        },
+        "getClient": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a client",
+            "description": "Returns client details",
+            "callParams": {
+                "pathName": "/clients/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getClient.in.json",
+                "out": "./lib/schemas/getClient.out.json"
+            }
+        },
+        "markItemDeleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark item as deleted",
+            "description": "Change item status into deleted",
+            "callParams": {
+                "pathName": "/item/{id}/deleted",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markItemDeleted.in.json",
+                "out": "./lib/schemas/markItemDeleted.out.json"
+            }
+        },
+        "updateClient": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a client",
+            "description": "Update client",
+            "callParams": {
+                "pathName": "/clients/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateClient.in.json",
+                "out": "./lib/schemas/updateClient.out.json"
+            }
+        },
+        "updateClientLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Add/change client logo",
+            "description": "",
+            "callParams": {
+                "pathName": "/clients/{id}/logo",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateClientLogo.in.json",
+                "out": "./lib/schemas/updateClientLogo.out.json"
+            }
+        },
+        "markClientActive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark client as active",
+            "description": "Mark client as active",
+            "callParams": {
+                "pathName": "/clients/{id}/active",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markClientActive.in.json",
+                "out": "./lib/schemas/markClientActive.out.json"
+            }
+        },
+        "deleteClientLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete Client logo",
+            "description": "Deletes client logo",
+            "callParams": {
+                "pathName": "/clients/{id}/logo",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteClientLogo.in.json",
+                "out": "./lib/schemas/deleteClientLogo.out.json"
+            }
+        },
+        "markClientArchived": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark client as archived",
+            "description": "Mark client as archived",
+            "callParams": {
+                "pathName": "/clients/{id}/archived",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markClientArchived.in.json",
+                "out": "./lib/schemas/markClientArchived.out.json"
+            }
+        },
+        "getInvoice": {
+            "main": "./lib/actions/action.js",
+            "title": "Get an invoice",
+            "description": "",
+            "callParams": {
+                "pathName": "/invoice/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInvoice.in.json",
+                "out": "./lib/schemas/getInvoice.out.json"
+            }
+        },
+        "markTaskArchived": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark task as archive",
+            "description": "Change task status into archive",
+            "callParams": {
+                "pathName": "/task/{id}/archived",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markTaskArchived.in.json",
+                "out": "./lib/schemas/markTaskArchived.out.json"
+            }
+        },
+        "createPayment": {
+            "main": "./lib/actions/action.js",
+            "title": "Create an invoice payment",
+            "description": "Creates new invoice payment",
+            "callParams": {
+                "pathName": "/invoice/{invoice_id}/payment",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createPayment.in.json",
+                "out": "./lib/schemas/createPayment.out.json"
+            }
+        },
+        "updateUserDetails": {
+            "main": "./lib/actions/action.js",
+            "title": "Update user details",
+            "description": "Update user details",
+            "callParams": {
+                "pathName": "/user/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateUserDetails.in.json",
+                "out": "./lib/schemas/updateUserDetails.out.json"
+            }
+        },
+        "getUnitDetails": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a unit",
+            "description": "Returns unit details",
+            "callParams": {
+                "pathName": "/units/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUnitDetails.in.json",
+                "out": "./lib/schemas/getUnitDetails.out.json"
+            }
+        },
+        "markClientDeleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark client as deleted",
+            "description": "Mark client as deleted",
+            "callParams": {
+                "pathName": "/clients/{id}/deleted",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markClientDeleted.in.json",
+                "out": "./lib/schemas/markClientDeleted.out.json"
+            }
+        },
+        "updateUserLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Add/change user logo",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/{id}/logo",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateUserLogo.in.json",
+                "out": "./lib/schemas/updateUserLogo.out.json"
+            }
+        },
+        "createUser": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a user",
+            "description": "Creates user",
+            "callParams": {
+                "pathName": "/user",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createUser.in.json",
+                "out": "./lib/schemas/createUser.out.json"
+            }
+        },
+        "activateUser": {
+            "main": "./lib/actions/action.js",
+            "title": "Activate user",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/{id}/activate",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/activateUser.in.json",
+                "out": "./lib/schemas/activateUser.out.json"
+            }
+        },
+        "deleteCurrentUserLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete Current User logo",
+            "description": "Deletes User logo",
+            "callParams": {
+                "pathName": "/user/current/logo",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteCurrentUserLogo.in.json",
+                "out": "./lib/schemas/deleteCurrentUserLogo.out.json"
+            }
+        },
+        "deactivateUser": {
+            "main": "./lib/actions/action.js",
+            "title": "Deactivate a user",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/{id}/deactivate",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deactivateUser.in.json",
+                "out": "./lib/schemas/deactivateUser.out.json"
+            }
+        },
+        "getUser": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a user",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getUser.in.json",
+                "out": "./lib/schemas/getUser.out.json"
+            }
+        },
+        "changeClockInStatus": {
+            "main": "./lib/actions/action.js",
+            "title": "Change user clock in / clock out status",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/set-clock-in-status",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/changeClockInStatus.in.json",
+                "out": "./lib/schemas/changeClockInStatus.out.json"
+            }
+        },
+        "deleteUserLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete User logo",
+            "description": "Deletes User logo",
+            "callParams": {
+                "pathName": "/user/{id}/logo",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteUserLogo.in.json",
+                "out": "./lib/schemas/deleteUserLogo.out.json"
+            }
+        },
+        "getLeave": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a leave details",
+            "description": "",
+            "callParams": {
+                "pathName": "/attendance/leave/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getLeave.in.json",
+                "out": "./lib/schemas/getLeave.out.json"
+            }
+        },
+        "rateLimit": {
+            "main": "./lib/actions/action.js",
+            "title": "Rate Limiting",
+            "description": "The limit is currently around 100 requests per 60 seconds per API access token, but this is not guaranteed: it may vary with server load, and we may change it in the future. You will receive a 429 HTTP response if you exceed the rate limit. Retry-After response header will specify the number of seconds after the user can make another request.Please contact us first, if you need perform a batch of API requests. Maybe we can provide you a more convenient way to retrieve the data.",
+            "callParams": {
+                "pathName": "/#",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/rateLimit.in.json",
+                "out": "./lib/schemas/rateLimit.out.json"
+            }
+        },
+        "updateCurrentUserLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Add/change current user logo",
+            "description": "",
+            "callParams": {
+                "pathName": "/user/current/logo",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateCurrentUserLogo.in.json",
+                "out": "./lib/schemas/updateCurrentUserLogo.out.json"
+            }
+        },
+        "createLeave": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a user leave",
+            "description": "Create new user leave",
+            "callParams": {
+                "pathName": "/attendance/leave",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createLeave.in.json",
+                "out": "./lib/schemas/createLeave.out.json"
+            }
+        },
+        "markVendorArchived": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark Vendor as archived",
+            "description": "Mark vendor as archived",
+            "callParams": {
+                "pathName": "/vendor/{id}/archived",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markVendorArchived.in.json",
+                "out": "./lib/schemas/markVendorArchived.out.json"
+            }
+        },
+        "getCurrency": {
+            "main": "./lib/actions/action.js",
+            "title": "Get currency",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCurrency.in.json",
+                "out": "./lib/schemas/getCurrency.out.json"
+            }
+        },
+        "getTeam": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a team",
+            "description": "",
+            "callParams": {
+                "pathName": "/team/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTeam.in.json",
+                "out": "./lib/schemas/getTeam.out.json"
+            }
+        },
+        "deleteCurrency": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a currency",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteCurrency.in.json",
+                "out": "./lib/schemas/deleteCurrency.out.json"
+            }
+        },
+        "getInvoicePayment": {
+            "main": "./lib/actions/action.js",
+            "title": "Get an invoice payment",
+            "description": "",
+            "callParams": {
+                "pathName": "/invoice/payment/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getInvoicePayment.in.json",
+                "out": "./lib/schemas/getInvoicePayment.out.json"
+            }
+        },
+        "updateLeave": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a user leave",
+            "description": "Update user leave details",
+            "callParams": {
+                "pathName": "/attendance/leave/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateLeave.in.json",
+                "out": "./lib/schemas/updateLeave.out.json"
+            }
+        },
+        "updateCurrency": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a currency",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateCurrency.in.json",
+                "out": "./lib/schemas/updateCurrency.out.json"
+            }
+        },
+        "deleteLeave": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a user leave",
+            "description": "Delete a user leave",
+            "callParams": {
+                "pathName": "/attendance/leave/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteLeave.in.json",
+                "out": "./lib/schemas/deleteLeave.out.json"
+            }
+        },
+        "createCurrency": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a currency",
+            "description": "",
+            "callParams": {
+                "pathName": "/currency",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createCurrency.in.json",
+                "out": "./lib/schemas/createCurrency.out.json"
+            }
+        },
+        "getProject": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a project",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getProject.in.json",
+                "out": "./lib/schemas/getProject.out.json"
+            }
+        },
+        "updateProject": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a project",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateProject.in.json",
+                "out": "./lib/schemas/updateProject.out.json"
+            }
+        },
+        "setTimeTicketCompleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Set a time ticket completed value",
+            "description": "",
+            "callParams": {
+                "pathName": "/time-ticket/{id}/completed",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/setTimeTicketCompleted.in.json",
+                "out": "./lib/schemas/setTimeTicketCompleted.out.json"
+            }
+        },
+        "getTimeTicket": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a time ticket details",
+            "description": "",
+            "callParams": {
+                "pathName": "/time-ticket/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getTimeTicket.in.json",
+                "out": "./lib/schemas/getTimeTicket.out.json"
+            }
+        },
+        "setTimeTicketTentative": {
+            "main": "./lib/actions/action.js",
+            "title": "Set a time ticket tentative value",
+            "description": "",
+            "callParams": {
+                "pathName": "/time-ticket/{id}/tentative",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/setTimeTicketTentative.in.json",
+                "out": "./lib/schemas/setTimeTicketTentative.out.json"
+            }
+        },
+        "markProjectActive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark project as active",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}/active",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markProjectActive.in.json",
+                "out": "./lib/schemas/markProjectActive.out.json"
+            }
+        },
+        "updatePayment": {
+            "main": "./lib/actions/action.js",
+            "title": "Update an invoice payment",
+            "description": "Updates invoice payment",
+            "callParams": {
+                "pathName": "/invoice/payment/{id}",
+                "method": "put",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updatePayment.in.json",
+                "out": "./lib/schemas/updatePayment.out.json"
+            }
+        },
+        "createProject": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a project",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createProject.in.json",
+                "out": "./lib/schemas/createProject.out.json"
+            }
+        },
+        "markProjectOpen": {
+            "main": "./lib/actions/action.js",
+            "title": "Open project, mark all tasks as active",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}/open",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markProjectOpen.in.json",
+                "out": "./lib/schemas/markProjectOpen.out.json"
+            }
+        },
+        "getExpense": {
+            "main": "./lib/actions/action.js",
+            "title": "Get an expense",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExpense.in.json",
+                "out": "./lib/schemas/getExpense.out.json"
+            }
+        },
+        "updateExpense": {
+            "main": "./lib/actions/action.js",
+            "title": "Update an expense",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/{id}",
+                "method": "patch",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateExpense.in.json",
+                "out": "./lib/schemas/updateExpense.out.json"
+            }
+        },
+        "markProjectArchived": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark project as archived",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}/archived",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markProjectArchived.in.json",
+                "out": "./lib/schemas/markProjectArchived.out.json"
+            }
+        },
+        "markProjectDeleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark project as deleted",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}/deleted",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markProjectDeleted.in.json",
+                "out": "./lib/schemas/markProjectDeleted.out.json"
+            }
+        },
+        "createExpenseCategory": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a category",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createExpenseCategory.in.json",
+                "out": "./lib/schemas/createExpenseCategory.out.json"
+            }
+        },
+        "deleteExpenseCategory": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a category",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteExpenseCategory.in.json",
+                "out": "./lib/schemas/deleteExpenseCategory.out.json"
+            }
+        },
+        "deleteExpense": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete an expense",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteExpense.in.json",
+                "out": "./lib/schemas/deleteExpense.out.json"
+            }
+        },
+        "createExpense": {
+            "main": "./lib/actions/action.js",
+            "title": "Create an expense",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createExpense.in.json",
+                "out": "./lib/schemas/createExpense.out.json"
+            }
+        },
+        "updateLeaveStatus": {
+            "main": "./lib/actions/action.js",
+            "title": "Change user leave status",
+            "description": "Change user leave status",
+            "callParams": {
+                "pathName": "/attendance/leave-change-status/{id}",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateLeaveStatus.in.json",
+                "out": "./lib/schemas/updateLeaveStatus.out.json"
+            }
+        },
+        "deleteReceipt": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a receipt",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/{id}/receipt",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteReceipt.in.json",
+                "out": "./lib/schemas/deleteReceipt.out.json"
+            }
+        },
+        "modifyExchangeRate": {
+            "main": "./lib/actions/action.js",
+            "title": "Create/Update exchange rate",
+            "description": "If rate for this date is not exist then it will be created. If rate for this date is exist then rate will be updated",
+            "callParams": {
+                "pathName": "/currency/{id}/rate",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/modifyExchangeRate.in.json",
+                "out": "./lib/schemas/modifyExchangeRate.out.json"
+            }
+        },
+        "deleteExpenseSubCategory": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a sub-category",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories/sub/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteExpenseSubCategory.in.json",
+                "out": "./lib/schemas/deleteExpenseSubCategory.out.json"
+            }
+        },
+        "createExpenseSubCategory": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a sub-category",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories/sub",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createExpenseSubCategory.in.json",
+                "out": "./lib/schemas/createExpenseSubCategory.out.json"
+            }
+        },
+        "markExpenseDeleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark expense as deleted",
+            "description": "Change expense status into deleted",
+            "callParams": {
+                "pathName": "/expense/{id}/deleted",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markExpenseDeleted.in.json",
+                "out": "./lib/schemas/markExpenseDeleted.out.json"
+            }
+        },
+        "updateExpenseCategory": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a category",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateExpenseCategory.in.json",
+                "out": "./lib/schemas/updateExpenseCategory.out.json"
+            }
+        },
+        "markProjectClose": {
+            "main": "./lib/actions/action.js",
+            "title": "Close project, mark all tasks as done",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}/close",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markProjectClose.in.json",
+                "out": "./lib/schemas/markProjectClose.out.json"
+            }
+        },
+        "updateExpenseMultipleItems": {
+            "main": "./lib/actions/action.js",
+            "title": "Update an expense with multiple items",
+            "description": "",
+            "callParams": {
+                "pathName": "/v2/expense/{id}",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateExpenseMultipleItems.in.json",
+                "out": "./lib/schemas/updateExpenseMultipleItems.out.json"
+            }
+        },
+        "createExpenseMultipleItems": {
+            "main": "./lib/actions/action.js",
+            "title": "Create an expense with multiple items",
+            "description": "",
+            "callParams": {
+                "pathName": "/v2/expense",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createExpenseMultipleItems.in.json",
+                "out": "./lib/schemas/createExpenseMultipleItems.out.json"
+            }
+        },
+        "startTimer": {
+            "main": "./lib/actions/action.js",
+            "title": "Start new timer",
+            "description": "",
+            "callParams": {
+                "pathName": "/timer/start",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/startTimer.in.json",
+                "out": "./lib/schemas/startTimer.out.json"
+            }
+        },
+        "attachExpenseReceipt": {
+            "main": "./lib/actions/action.js",
+            "title": "Attach a receipt",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/{id}/receipt",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/attachExpenseReceipt.in.json",
+                "out": "./lib/schemas/attachExpenseReceipt.out.json"
+            }
+        },
+        "markExpenseActive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark expense as active",
+            "description": "Change expense status into active",
+            "callParams": {
+                "pathName": "/expense/{id}/active",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markExpenseActive.in.json",
+                "out": "./lib/schemas/markExpenseActive.out.json"
+            }
+        },
+        "getExpenseCategories": {
+            "main": "./lib/actions/action.js",
+            "title": "Get expense sub-categories",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories/{id}/sub/{subId}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getExpenseCategories.in.json",
+                "out": "./lib/schemas/getExpenseCategories.out.json"
+            }
+        },
+        "updateMileage": {
+            "main": "./lib/actions/action.js",
+            "title": "Update an mileage",
+            "description": "",
+            "callParams": {
+                "pathName": "/mileage/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateMileage.in.json",
+                "out": "./lib/schemas/updateMileage.out.json"
+            }
+        },
+        "createMileage": {
+            "main": "./lib/actions/action.js",
+            "title": "Create an mileage",
+            "description": "",
+            "callParams": {
+                "pathName": "/mileage",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createMileage.in.json",
+                "out": "./lib/schemas/createMileage.out.json"
+            }
+        },
+        "markMileageArchive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark mileage as archive",
+            "description": "Change mileage status into archive",
+            "callParams": {
+                "pathName": "/mileage/{id}/archived",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markMileageArchive.in.json",
+                "out": "./lib/schemas/markMileageArchive.out.json"
+            }
+        },
+        "markMileageDeleted": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark mileage as deleted",
+            "description": "Change mileage status into deleted",
+            "callParams": {
+                "pathName": "/mileage/{id}/deleted",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markMileageDeleted.in.json",
+                "out": "./lib/schemas/markMileageDeleted.out.json"
+            }
+        },
+        "uncompensateMileage": {
+            "main": "./lib/actions/action.js",
+            "title": "Uncompensate mileage",
+            "description": "Change mileage compensation status",
+            "callParams": {
+                "pathName": "/mileage/{id}/uncompensate",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/uncompensateMileage.in.json",
+                "out": "./lib/schemas/uncompensateMileage.out.json"
+            }
+        },
+        "markMileageActive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark mileage as active",
+            "description": "Change mileage status into active",
+            "callParams": {
+                "pathName": "/mileage/{id}/active",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markMileageActive.in.json",
+                "out": "./lib/schemas/markMileageActive.out.json"
+            }
+        },
+        "cancelTimer": {
+            "main": "./lib/actions/action.js",
+            "title": "Cancel timer",
+            "description": "This request will remove all time gaps from timer and stop it without saving data",
+            "callParams": {
+                "pathName": "/timer/cancel",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/cancelTimer.in.json",
+                "out": "./lib/schemas/cancelTimer.out.json"
+            }
+        },
+        "updateTimer": {
+            "main": "./lib/actions/action.js",
+            "title": "Update timer",
+            "description": "",
+            "callParams": {
+                "pathName": "/timer/update",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateTimer.in.json",
+                "out": "./lib/schemas/updateTimer.out.json"
+            }
+        },
+        "compensateMileage": {
+            "main": "./lib/actions/action.js",
+            "title": "Compensate mileage",
+            "description": "Change mileage compensation status",
+            "callParams": {
+                "pathName": "/mileage/{id}/compensate",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/compensateMileage.in.json",
+                "out": "./lib/schemas/compensateMileage.out.json"
+            }
+        },
+        "timeTrackingApprovalSubmit": {
+            "main": "./lib/actions/action.js",
+            "title": "Submit for approval hours",
+            "description": "",
+            "callParams": {
+                "pathName": "/approval/week/submit",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timeTrackingApprovalSubmit.in.json",
+                "out": "./lib/schemas/timeTrackingApprovalSubmit.out.json"
+            }
+        },
+        "timeTrackingApprovalUnlock": {
+            "main": "./lib/actions/action.js",
+            "title": "Unlock approved week",
+            "description": "",
+            "callParams": {
+                "pathName": "/approval/week/unlock",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timeTrackingApprovalUnlock.in.json",
+                "out": "./lib/schemas/timeTrackingApprovalUnlock.out.json"
+            }
+        },
+        "timeTrackingApprovalApprove": {
+            "main": "./lib/actions/action.js",
+            "title": "Approve submitted for approval week",
+            "description": "",
+            "callParams": {
+                "pathName": "/approval/week/approve",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timeTrackingApprovalApprove.in.json",
+                "out": "./lib/schemas/timeTrackingApprovalApprove.out.json"
+            }
+        },
+        "timeTrackingApprovalAddNote": {
+            "main": "./lib/actions/action.js",
+            "title": "Add week note",
+            "description": "",
+            "callParams": {
+                "pathName": "/approval/week/add-note",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timeTrackingApprovalAddNote.in.json",
+                "out": "./lib/schemas/timeTrackingApprovalAddNote.out.json"
+            }
+        },
+        "createTimeEntry": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a time entry",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createTimeEntry.in.json",
+                "out": "./lib/schemas/createTimeEntry.out.json"
+            }
+        },
+        "deleteTimeEntry": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a time entry",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteTimeEntry.in.json",
+                "out": "./lib/schemas/deleteTimeEntry.out.json"
+            }
+        },
+        "resetTimer": {
+            "main": "./lib/actions/action.js",
+            "title": "Reset timer",
+            "description": "This request will remove all time gaps from timer object and restart timer",
+            "callParams": {
+                "pathName": "/timer/reset",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/resetTimer.in.json",
+                "out": "./lib/schemas/resetTimer.out.json"
+            }
+        },
+        "timeTrackingApprovalReject": {
+            "main": "./lib/actions/action.js",
+            "title": "Reject submitted for approval week",
+            "description": "",
+            "callParams": {
+                "pathName": "/approval/week/reject",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/timeTrackingApprovalReject.in.json",
+                "out": "./lib/schemas/timeTrackingApprovalReject.out.json"
+            }
+        },
+        "markExpenseArchive": {
+            "main": "./lib/actions/action.js",
+            "title": "Mark expense as archive",
+            "description": "Change expense status into archive",
+            "callParams": {
+                "pathName": "/expense/{id}/archived",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/markExpenseArchive.in.json",
+                "out": "./lib/schemas/markExpenseArchive.out.json"
+            }
+        },
+        "updateExpenseSubCategory": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a sub-category",
+            "description": "",
+            "callParams": {
+                "pathName": "/expense/categories/sub/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateExpenseSubCategory.in.json",
+                "out": "./lib/schemas/updateExpenseSubCategory.out.json"
+            }
+        },
+        "updateTimeEntry": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a time entry",
+            "description": "",
+            "callParams": {
+                "pathName": "/timesheet/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateTimeEntry.in.json",
+                "out": "./lib/schemas/updateTimeEntry.out.json"
+            }
+        },
+        "companyUpdateTaxInfo": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a company tax info",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/taxinfo",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyUpdateTaxInfo.in.json",
+                "out": "./lib/schemas/companyUpdateTaxInfo.out.json"
+            }
+        },
+        "settingsUpdateLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Update company logo image",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/logo",
+                "method": "post",
+                "requestContentType": "multipart/form-data"
+            },
+            "metadata": {
+                "in": "./lib/schemas/settingsUpdateLogo.in.json",
+                "out": "./lib/schemas/settingsUpdateLogo.out.json"
+            }
+        },
+        "companyUpdateBankInfo": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a company bank info",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/bankinfo",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyUpdateBankInfo.in.json",
+                "out": "./lib/schemas/companyUpdateBankInfo.out.json"
+            }
+        },
+        "settingsDeleteLogo": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete company logo image",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/logo",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/settingsDeleteLogo.in.json",
+                "out": "./lib/schemas/settingsDeleteLogo.out.json"
+            }
+        },
+        "stopTimer": {
+            "main": "./lib/actions/action.js",
+            "title": "Stop timer",
+            "description": "This request will stop current timer and add logged time to user timesheets",
+            "callParams": {
+                "pathName": "/timer/stop",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/stopTimer.in.json",
+                "out": "./lib/schemas/stopTimer.out.json"
+            }
+        },
+        "settingsUpdateTax": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a tax",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/tax/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/settingsUpdateTax.in.json",
+                "out": "./lib/schemas/settingsUpdateTax.out.json"
+            }
+        },
+        "companyGetTaxGroup": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a tax group",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/taxgroup/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyGetTaxGroup.in.json",
+                "out": "./lib/schemas/companyGetTaxGroup.out.json"
+            }
+        },
+        "companyGetTax": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a tax",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/tax/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyGetTax.in.json",
+                "out": "./lib/schemas/companyGetTax.out.json"
+            }
+        },
+        "settingsUpdateTaxGroup": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a tax group",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/taxgroup/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/settingsUpdateTaxGroup.in.json",
+                "out": "./lib/schemas/settingsUpdateTaxGroup.out.json"
+            }
+        },
+        "deleteTaxGroup": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a tax group",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/taxgroup/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteTaxGroup.in.json",
+                "out": "./lib/schemas/deleteTaxGroup.out.json"
+            }
+        },
+        "updateCompanyPreferences": {
+            "main": "./lib/actions/action.js",
+            "title": "Update company preferences",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/preferences",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateCompanyPreferences.in.json",
+                "out": "./lib/schemas/updateCompanyPreferences.out.json"
+            }
+        },
+        "deleteTax": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a tax",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/tax/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteTax.in.json",
+                "out": "./lib/schemas/deleteTax.out.json"
+            }
+        },
+        "createTeam": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a team",
+            "description": "",
+            "callParams": {
+                "pathName": "/team",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createTeam.in.json",
+                "out": "./lib/schemas/createTeam.out.json"
+            }
+        },
+        "updateCompanyProfile": {
+            "main": "./lib/actions/action.js",
+            "title": "Update company profile",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/profile",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateCompanyProfile.in.json",
+                "out": "./lib/schemas/updateCompanyProfile.out.json"
+            }
+        },
+        "companyUpdateAddress": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a company address",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/address",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/companyUpdateAddress.in.json",
+                "out": "./lib/schemas/companyUpdateAddress.out.json"
+            }
+        },
+        "updateStripeSettings": {
+            "main": "./lib/actions/action.js",
+            "title": "Create/Update stripe settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/gateways/stripe",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateStripeSettings.in.json",
+                "out": "./lib/schemas/updateStripeSettings.out.json"
+            }
+        },
+        "updateCompanyTemplateSettings": {
+            "main": "./lib/actions/action.js",
+            "title": "Update company template settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/template",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateCompanyTemplateSettings.in.json",
+                "out": "./lib/schemas/updateCompanyTemplateSettings.out.json"
+            }
+        },
+        "createTerm": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a term",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/terms",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createTerm.in.json",
+                "out": "./lib/schemas/createTerm.out.json"
+            }
+        },
+        "changeStripe": {
+            "main": "./lib/actions/action.js",
+            "title": "Activate/Disactivate stripe",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/gateways/stripe/{action}",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/changeStripe.in.json",
+                "out": "./lib/schemas/changeStripe.out.json"
+            }
+        },
+        "settingsCreateTaxGroup": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a tax group",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/taxgroup",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/settingsCreateTaxGroup.in.json",
+                "out": "./lib/schemas/settingsCreateTaxGroup.out.json"
+            }
+        },
+        "updatePaypalSettings": {
+            "main": "./lib/actions/action.js",
+            "title": "Create/Update paypal settings",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/gateways/paypal",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updatePaypalSettings.in.json",
+                "out": "./lib/schemas/updatePaypalSettings.out.json"
+            }
+        },
+        "createCustomField": {
+            "main": "./lib/actions/action.js",
+            "title": "Create client/project custom field",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/custom-fields/{type}",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/createCustomField.in.json",
+                "out": "./lib/schemas/createCustomField.out.json"
+            }
+        },
+        "updateCustomField": {
+            "main": "./lib/actions/action.js",
+            "title": "Update client/project custom field",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/custom-fields/{type}/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateCustomField.in.json",
+                "out": "./lib/schemas/updateCustomField.out.json"
+            }
+        },
+        "getVendor": {
+            "main": "./lib/actions/action.js",
+            "title": "Get a vendor",
+            "description": "Returns vendor details",
+            "callParams": {
+                "pathName": "/vendor/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getVendor.in.json",
+                "out": "./lib/schemas/getVendor.out.json"
+            }
+        },
+        "updateNumberGroup": {
+            "main": "./lib/actions/action.js",
+            "title": "Update number group",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/number-groups/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateNumberGroup.in.json",
+                "out": "./lib/schemas/updateNumberGroup.out.json"
+            }
+        },
+        "getCustomFieldDetails": {
+            "main": "./lib/actions/action.js",
+            "title": "Get client/project custom field details",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/custom-fields/{type}/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCustomFieldDetails.in.json",
+                "out": "./lib/schemas/getCustomFieldDetails.out.json"
+            }
+        },
+        "changePaypal": {
+            "main": "./lib/actions/action.js",
+            "title": "Activate/Disactivate paypal",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/gateways/paypal/{action}",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/changePaypal.in.json",
+                "out": "./lib/schemas/changePaypal.out.json"
+            }
+        },
+        "getFormattedDate": {
+            "main": "./lib/actions/action.js",
+            "title": "Get formatted date",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/formatdates",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getFormattedDate.in.json",
+                "out": "./lib/schemas/getFormattedDate.out.json"
+            }
+        },
+        "settingsCreateTax": {
+            "main": "./lib/actions/action.js",
+            "title": "Create a tax",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/tax",
+                "method": "post",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/settingsCreateTax.in.json",
+                "out": "./lib/schemas/settingsCreateTax.out.json"
+            }
+        },
+        "deleteCustomField": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete client/project custom field",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/custom-fields/{type}/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteCustomField.in.json",
+                "out": "./lib/schemas/deleteCustomField.out.json"
+            }
+        },
+        "deleteTerm": {
+            "main": "./lib/actions/action.js",
+            "title": "Delete a term",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/terms/{id}",
+                "method": "delete"
+            },
+            "metadata": {
+                "in": "./lib/schemas/deleteTerm.in.json",
+                "out": "./lib/schemas/deleteTerm.out.json"
+            }
+        },
+        "pauseTimer": {
+            "main": "./lib/actions/action.js",
+            "title": "Pause timer",
+            "description": "",
+            "callParams": {
+                "pathName": "/timer/pause",
+                "method": "post"
+            },
+            "metadata": {
+                "in": "./lib/schemas/pauseTimer.in.json",
+                "out": "./lib/schemas/pauseTimer.out.json"
+            }
+        },
+        "updateTaskAssignment": {
+            "main": "./lib/actions/action.js",
+            "title": "Update project tasks assignment",
+            "description": "",
+            "callParams": {
+                "pathName": "/projects/{id}/task-assignment",
+                "method": "post",
+                "requestContentType": "application/json"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateTaskAssignment.in.json",
+                "out": "./lib/schemas/updateTaskAssignment.out.json"
+            }
+        },
+        "getCustomFields": {
+            "main": "./lib/actions/action.js",
+            "title": "Get client/project custom field list",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/custom-fields/{type}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCustomFields.in.json",
+                "out": "./lib/schemas/getCustomFields.out.json"
+            }
+        },
+        "getNumberGroup": {
+            "main": "./lib/actions/action.js",
+            "title": "Get number group details",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/number-groups/{id}",
+                "method": "get"
+            },
+            "metadata": {
+                "in": "./lib/schemas/getNumberGroup.in.json",
+                "out": "./lib/schemas/getNumberGroup.out.json"
+            }
+        },
+        "updateTerm": {
+            "main": "./lib/actions/action.js",
+            "title": "Update a term",
+            "description": "",
+            "callParams": {
+                "pathName": "/settings/terms/{id}",
+                "method": "put",
+                "requestContentType": "application/x-www-form-urlencoded"
+            },
+            "metadata": {
+                "in": "./lib/schemas/updateTerm.in.json",
+                "out": "./lib/schemas/updateTerm.out.json"
+            }
+        }
+    }
+}

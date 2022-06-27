@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "unit_cost",
+                "unit_id"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "unit_cost": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "tax1_id": {
+                    "type": "integer"
+                },
+                "unit_id": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

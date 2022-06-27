@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 124
+        },
+        "code": {
+            "type": "string"
+        },
+        "symbol": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        }
+    }
+}

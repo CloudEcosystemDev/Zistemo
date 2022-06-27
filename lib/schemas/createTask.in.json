@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "rate",
+                "billable"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "billable": {
+                    "type": "boolean"
+                },
+                "rate": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "tax_id": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

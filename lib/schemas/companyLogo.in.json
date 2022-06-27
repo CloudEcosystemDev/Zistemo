@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "hq": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        }
+    }
+}

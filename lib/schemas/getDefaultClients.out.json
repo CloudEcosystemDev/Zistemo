@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "properties": {
+        "term_id": {
+            "type": "integer",
+            "example": 3
+        },
+        "term_name": {
+            "type": "string"
+        },
+        "language_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "language_name": {
+            "type": "string"
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 840
+        },
+        "currency": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "number_format": {
+                    "type": "object",
+                    "properties": {
+                        "thousands_sep": {
+                            "type": "string"
+                        },
+                        "dec_point": {
+                            "type": "string"
+                        },
+                        "places": {
+                            "type": "integer",
+                            "example": 2
+                        }
+                    }
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "country": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 228
+                },
+                "code": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "language_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "address_type": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        }
+    }
+}

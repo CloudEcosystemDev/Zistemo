@@ -1,0 +1,128 @@
+{
+    "type": "object",
+    "required": [
+        "items"
+    ],
+    "properties": {
+        "items": {
+            "type": "array",
+            "description": "Items",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 308
+                    },
+                    "document_category_id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "user_id": {
+                        "type": "integer",
+                        "example": 8482
+                    },
+                    "mileage_type_id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "mileage_car_id": {
+                        "type": "integer",
+                        "example": 111
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "note": {
+                        "type": "string"
+                    },
+                    "dt": {
+                        "type": "string"
+                    },
+                    "tm": {
+                        "type": "string"
+                    },
+                    "start": {
+                        "type": "integer",
+                        "example": 105
+                    },
+                    "end": {
+                        "type": "integer",
+                        "example": 215
+                    },
+                    "distance": {
+                        "type": "integer",
+                        "example": 110
+                    },
+                    "rate": {
+                        "type": "string"
+                    },
+                    "total": {
+                        "type": "string"
+                    },
+                    "is_billable": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "customer_id": {
+                        "type": "integer"
+                    },
+                    "project_id": {
+                        "type": "integer"
+                    },
+                    "task_id": {
+                        "type": "integer"
+                    },
+                    "unit": {
+                        "type": "string"
+                    },
+                    "document_status_id": {
+                        "type": "integer",
+                        "example": 29
+                    },
+                    "status": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "status_name": {
+                        "type": "string"
+                    },
+                    "staff_rate": {
+                        "type": "string"
+                    },
+                    "task_group_id": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "dt_formatted": {
+                        "type": "string"
+                    },
+                    "document_category_name": {
+                        "type": "string"
+                    },
+                    "document_status_name": {
+                        "type": "string"
+                    },
+                    "customer_name": {
+                        "type": "string"
+                    },
+                    "project_name": {
+                        "type": "string"
+                    },
+                    "task_name": {
+                        "type": "string"
+                    },
+                    "user_name": {
+                        "type": "string"
+                    },
+                    "mileage_type_name": {
+                        "type": "string"
+                    },
+                    "mileage_car_name": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

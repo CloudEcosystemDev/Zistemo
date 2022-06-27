@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "leader_id",
+                "member_ids"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "leader_id": {
+                    "type": "integer",
+                    "example": 22
+                },
+                "member_ids": {
+                    "type": "array",
+                    "example": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "description": "List of member IDs",
+                    "items": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            }
+        }
+    }
+}

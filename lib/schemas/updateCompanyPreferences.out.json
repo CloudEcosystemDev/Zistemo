@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "allow_edit_sent_doc": {
+            "type": "integer",
+            "example": 1
+        },
+        "allow_edit_approved_estimate": {
+            "type": "integer",
+            "example": 1
+        },
+        "is_show_title": {
+            "type": "integer",
+            "example": 1
+        },
+        "allow_manual_doc_number": {
+            "type": "integer",
+            "example": 1
+        },
+        "is_delivery_note": {
+            "type": "integer",
+            "example": 0
+        },
+        "is_packing_slip": {
+            "type": "integer",
+            "example": 0
+        },
+        "cc_estimate": {
+            "type": "integer",
+            "example": 1
+        },
+        "cc_invoice": {
+            "type": "integer",
+            "example": 1
+        },
+        "cc_reminder": {
+            "type": "integer",
+            "example": 1
+        },
+        "logo_text": {
+            "type": "string"
+        },
+        "welcome_client": {
+            "type": "string"
+        },
+        "welcome_staff": {
+            "type": "string"
+        }
+    }
+}

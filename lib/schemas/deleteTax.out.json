@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 118
+        },
+        "name": {
+            "type": "string"
+        },
+        "rate": {
+            "type": "string"
+        },
+        "is_active": {
+            "type": "integer",
+            "example": 1
+        },
+        "is_group": {
+            "type": "integer",
+            "example": 0
+        }
+    }
+}

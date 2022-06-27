@@ -1,0 +1,494 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 991
+        },
+        "language_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 840
+        },
+        "term_id": {
+            "type": "integer",
+            "example": 3
+        },
+        "document_category_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "registration _id": {
+            "type": "number"
+        },
+        "tax_id": {
+            "type": "string"
+        },
+        "notes": {
+            "type": "string"
+        },
+        "is_shipping_same_as_billing": {
+            "type": "boolean"
+        },
+        "primary_contact_id": {
+            "type": "integer"
+        },
+        "prefix": {
+            "type": "string"
+        },
+        "is_blocked": {
+            "type": "integer",
+            "example": 0
+        },
+        "show_tax": {
+            "type": "integer",
+            "example": 0
+        },
+        "cash_discount": {
+            "type": "number"
+        },
+        "cash_discount_days": {
+            "type": "integer",
+            "example": 10
+        },
+        "enable_cash_discount": {
+            "type": "integer",
+            "example": 0
+        },
+        "allow_reverse_charge": {
+            "type": "integer",
+            "example": 1
+        },
+        "type_client": {
+            "type": "integer",
+            "example": 0
+        },
+        "score_type": {
+            "type": "integer",
+            "example": 1
+        },
+        "number": {
+            "type": "string"
+        },
+        "vendor_number": {
+            "type": "string"
+        },
+        "retainer_balance": {
+            "type": "number",
+            "example": 101.44
+        },
+        "template_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "send_payment_notification": {
+            "type": "integer",
+            "example": 1
+        },
+        "datev_id": {
+            "type": "integer",
+            "example": 10001
+        },
+        "codice_destinatario": {
+            "type": "string"
+        },
+        "pec_mail": {
+            "type": "string"
+        },
+        "valid_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "has_logo": {
+            "type": "boolean",
+            "example": true
+        },
+        "document_category_name": {
+            "type": "string"
+        },
+        "language_name": {
+            "type": "string"
+        },
+        "term_name": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "number_format": {
+                    "type": "object",
+                    "properties": {
+                        "thousands_sep": {
+                            "type": "string"
+                        },
+                        "dec_point": {
+                            "type": "string"
+                        },
+                        "places": {
+                            "type": "integer",
+                            "example": 2
+                        }
+                    }
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "users": {
+            "type": "array",
+            "description": "Information about the contact(s) of the vendors",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1992
+                    },
+                    "first_name": {
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "mobile": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "fax": {
+                        "type": "string"
+                    },
+                    "position": {
+                        "type": "string"
+                    },
+                    "department": {
+                        "type": "string"
+                    },
+                    "salutation": {
+                        "type": "string"
+                    },
+                    "is_primary": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        },
+        "billing_address": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 183
+                },
+                "country_id": {
+                    "type": "integer"
+                },
+                "address1": {
+                    "type": "string"
+                },
+                "address2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "fax": {
+                    "type": "string"
+                },
+                "country_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "shipping_address": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 183
+                },
+                "country_id": {
+                    "type": "integer"
+                },
+                "address1": {
+                    "type": "string"
+                },
+                "address2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "fax": {
+                    "type": "string"
+                },
+                "country_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "address_book": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 183
+                    },
+                    "country_id": {
+                        "type": "integer"
+                    },
+                    "address1": {
+                        "type": "string"
+                    },
+                    "address2": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "state": {
+                        "type": "string"
+                    },
+                    "zip": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "mobile": {
+                        "type": "string"
+                    },
+                    "fax": {
+                        "type": "string"
+                    },
+                    "country_name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "balance": {
+            "type": "number"
+        },
+        "balance_currency": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "number_format": {
+                    "type": "object",
+                    "properties": {
+                        "thousands_sep": {
+                            "type": "string"
+                        },
+                        "dec_point": {
+                            "type": "string"
+                        },
+                        "places": {
+                            "type": "integer",
+                            "example": 2
+                        }
+                    }
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "custom_fields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "date_time_value": {
+                        "type": "string"
+                    },
+                    "int_value": {
+                        "type": "integer",
+                        "example": 1
+                    }
+                }
+            }
+        },
+        "projects": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "project_name": {
+                        "type": "string"
+                    },
+                    "document_category_id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "document_category_name": {
+                        "type": "string"
+                    },
+                    "customer_id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "customer_name": {
+                        "type": "string"
+                    },
+                    "billing_method_id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "billing_method_name": {
+                        "type": "string"
+                    },
+                    "project_budget_id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "project_budget_name": {
+                        "type": "string"
+                    },
+                    "start_date": {
+                        "type": "string"
+                    },
+                    "end_date": {
+                        "type": "string"
+                    },
+                    "is_budgeted": {
+                        "type": "boolean"
+                    },
+                    "is_dates_set": {
+                        "type": "boolean"
+                    },
+                    "logged_hours": {
+                        "type": "number"
+                    },
+                    "billed_hours": {
+                        "type": "number"
+                    },
+                    "budget_hours": {
+                        "type": "number"
+                    },
+                    "logged_cost": {
+                        "type": "number"
+                    },
+                    "budget_cost": {
+                        "type": "number"
+                    },
+                    "staff_cost": {
+                        "type": "number"
+                    },
+                    "currency_code": {
+                        "type": "string"
+                    },
+                    "currency_symbol": {
+                        "type": "string"
+                    },
+                    "company_currency_code": {
+                        "type": "string"
+                    },
+                    "company_currency_symbol": {
+                        "type": "string"
+                    },
+                    "start_date_formatted": {
+                        "type": "string"
+                    },
+                    "end_date_formatted": {
+                        "type": "string"
+                    },
+                    "revenue": {
+                        "type": "number"
+                    },
+                    "draft_billed_hours": {
+                        "type": "number"
+                    },
+                    "status": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "last_update_date": {
+            "type": "string"
+        }
+    }
+}

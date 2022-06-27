@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "description": "Allowed statuses: submit, reject, approve",
+                    "type": "string",
+                    "enum": [
+                        "submit",
+                        "reject",
+                        "approve"
+                    ]
+                }
+            },
+            "required": [
+                "status"
+            ]
+        }
+    }
+}

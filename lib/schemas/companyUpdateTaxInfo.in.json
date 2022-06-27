@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "tax_id": {
+                    "type": "string"
+                },
+                "registration_id": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "user_id": {
+                    "description": "User ID. Default value is id of authorized user",
+                    "type": "integer"
+                },
+                "dt": {
+                    "description": "Date in format Y-m-d (2019-21-31)",
+                    "type": "string"
+                },
+                "mileage_type_id": {
+                    "description": "Available types are described in [Mileage Default Values](#Mileages_mileageDefaults)",
+                    "type": "integer"
+                },
+                "title": {
+                    "description": "Parameters",
+                    "type": "string"
+                },
+                "note": {
+                    "description": "Parameters",
+                    "type": "string"
+                },
+                "tm": {
+                    "description": "Time",
+                    "type": "string"
+                },
+                "start": {
+                    "description": "Start mileage",
+                    "type": "number"
+                },
+                "end": {
+                    "description": "End mileage",
+                    "type": "number"
+                },
+                "distance": {
+                    "description": "calculated value : end - start",
+                    "type": "integer"
+                },
+                "rate": {
+                    "description": "Parameters",
+                    "type": "number"
+                },
+                "is_billable": {
+                    "description": "1 - Milleage is billable. If is_assigned_to_client = 0 then this value will be setted to 0",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ],
+                    "default": 0
+                },
+                "is_assigned_to_client": {
+                    "description": "1 - Mileage is assigned to a client.",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ],
+                    "default": 0
+                },
+                "customer_id": {
+                    "description": "Parameters",
+                    "type": "integer"
+                },
+                "project_id": {
+                    "description": "Parameters",
+                    "type": "integer"
+                },
+                "unit": {
+                    "description": "Parameters",
+                    "type": "string",
+                    "enum": [
+                        "km",
+                        "miles"
+                    ],
+                    "default": "km"
+                },
+                "car_name": {
+                    "description": "Parameters",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dt",
+                "mileage_type_id",
+                "title",
+                "tm",
+                "distance",
+                "car_name"
+            ]
+        }
+    }
+}

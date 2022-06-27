@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "date": {
+            "required": true,
+            "type": "string"
+        },
+        "user_id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "pattern": "[\\d]+"
+        },
+        "notes": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

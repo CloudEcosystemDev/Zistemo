@@ -1,0 +1,19 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "name"
+        ],
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 2,
+                "format": "int64"
+            },
+            "name": {
+                "type": "string"
+            }
+        }
+    }
+}

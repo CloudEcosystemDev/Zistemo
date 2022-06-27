@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "unit_cost",
+                "unit_id"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "unit_cost": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "tax1_id": {
+                    "type": "integer"
+                },
+                "unit_id": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

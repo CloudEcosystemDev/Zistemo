@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "per-page": {
+            "required": false,
+            "type": "integer"
+        },
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "category": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "active",
+                "archived",
+                "deleted",
+                "all"
+            ]
+        },
+        "modified_from": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_to": {
+            "required": false,
+            "type": "string"
+        },
+        "issued_from": {
+            "required": false,
+            "type": "string"
+        },
+        "issued_to": {
+            "required": false,
+            "type": "string"
+        },
+        "customer_name": {
+            "required": false,
+            "type": "string"
+        },
+        "customer_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "search": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

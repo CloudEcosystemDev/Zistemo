@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "action": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "activate",
+                "disactivate"
+            ]
+        }
+    }
+}

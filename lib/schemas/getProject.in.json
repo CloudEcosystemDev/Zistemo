@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "skip_time_entries": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

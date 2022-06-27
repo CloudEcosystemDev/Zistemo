@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "access_token": {
+            "type": "string"
+        },
+        "stripe_publishable_key": {
+            "type": "string"
+        }
+    }
+}

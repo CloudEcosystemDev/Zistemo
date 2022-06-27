@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of sub-category",
+                    "type": "string"
+                },
+                "parent_id": {
+                    "description": "ID of parent category",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "name",
+                "parent_id"
+            ]
+        }
+    }
+}

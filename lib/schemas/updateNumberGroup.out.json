@@ -1,0 +1,60 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 1
+            },
+            "format": {
+                "type": "string"
+            },
+            "current_number": {
+                "type": "string"
+            },
+            "preview": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "name_translated": {
+                "type": "string"
+            },
+            "placeholders": {
+                "type": "object",
+                "example": {
+                    "names": {
+                        "%NUMBER": "Next digit (required)",
+                        "%YYYY": "Current year (2018)",
+                        "%YY": "Current year (18)",
+                        "%MM": "Current month (09)",
+                        "%M": "Current month (9)",
+                        "%mm": "Current month (January)",
+                        "%m": "Current month (Jan)",
+                        "%DD": "Current day (05)",
+                        "%D": "Current day (5)",
+                        "%dd": "Current day (Friday)",
+                        "%d": "Current day (Fri)",
+                        "%CLN": "Client Number"
+                    },
+                    "values": {
+                        "%NUMBER": "0009",
+                        "%YYYY": "2018",
+                        "%YY": "18",
+                        "%MM": "01",
+                        "%M": "1",
+                        "%mm": "January",
+                        "%m": "Jan",
+                        "%DD": "26",
+                        "%D": "26",
+                        "%dd": "Friday",
+                        "%d": "Fri",
+                        "%CLN": "???"
+                    }
+                }
+            }
+        }
+    }
+}

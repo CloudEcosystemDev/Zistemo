@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "expense_date",
+                "user_id",
+                "currency_id",
+                "vendor_name",
+                "items"
+            ],
+            "properties": {
+                "expense_date": {
+                    "type": "string"
+                },
+                "user_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 826
+                },
+                "rate": {
+                    "type": "number",
+                    "example": 1.28
+                },
+                "project_id": {
+                    "type": "integer"
+                },
+                "surcharge_enabled": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "surcharge_type": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "surcharge_value": {
+                    "type": "number",
+                    "example": 17
+                },
+                "paid_by_author": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "vendor_name": {
+                    "type": "string"
+                },
+                "delete_main_item": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "items": {
+                    "type": "object",
+                    "title": "Expense Item",
+                    "properties": {
+                        "temp_id_1": {
+                            "title": "Expense Item Details",
+                            "type": "object",
+                            "required": [
+                                "amount"
+                            ],
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "amount": {
+                                    "type": "number",
+                                    "example": 667
+                                },
+                                "expense_category_id": {
+                                    "type": "integer",
+                                    "example": 41
+                                },
+                                "taxes": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "tax1_id": {
+                                    "type": "integer",
+                                    "example": 324
+                                },
+                                "note": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

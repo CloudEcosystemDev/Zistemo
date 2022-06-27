@@ -1,0 +1,40 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "name"
+        ],
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 123,
+                "format": "int64"
+            },
+            "name": {
+                "type": "string"
+            },
+            "billable": {
+                "type": "boolean"
+            },
+            "rate": {
+                "type": "number"
+            },
+            "description": {
+                "type": "string"
+            },
+            "document_category_id": {
+                "type": "integer"
+            },
+            "tax_id": {
+                "type": "integer"
+            },
+            "created": {
+                "type": "string"
+            },
+            "documentCategoryName": {
+                "type": "string"
+            }
+        }
+    }
+}

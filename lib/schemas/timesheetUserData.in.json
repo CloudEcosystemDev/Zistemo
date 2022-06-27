@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "date_from": {
+            "required": false,
+            "type": "string"
+        },
+        "date_to": {
+            "required": false,
+            "type": "string"
+        },
+        "user_id": {
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "pattern": "[\\d]+"
+        },
+        "project_id": {
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "pattern": "[\\d]+"
+        },
+        "modified_from": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_to": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

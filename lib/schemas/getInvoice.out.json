@@ -1,0 +1,272 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 2283
+        },
+        "user_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "customer_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "language_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "document_status_id": {
+            "type": "integer",
+            "example": 27
+        },
+        "document_category_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "number": {
+            "type": "string"
+        },
+        "issued": {
+            "type": "string"
+        },
+        "discount": {
+            "type": "number"
+        },
+        "total": {
+            "type": "number"
+        },
+        "base_total": {
+            "type": "number"
+        },
+        "terms": {
+            "type": "string"
+        },
+        "notes": {
+            "type": "string"
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 980
+        },
+        "description": {
+            "type": "string"
+        },
+        "due_date": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "internal_note": {
+            "type": "string"
+        },
+        "created": {
+            "type": "string"
+        },
+        "modified": {
+            "type": "string"
+        },
+        "rate": {
+            "type": "number"
+        },
+        "intro": {
+            "type": "string"
+        },
+        "allow_reverse_charge": {
+            "type": "integer",
+            "example": 0
+        },
+        "reverse_charge": {
+            "type": "string"
+        },
+        "cash_discount": {
+            "type": "number"
+        },
+        "cash_discount_days": {
+            "type": "integer",
+            "example": 10
+        },
+        "enable_cash_discount": {
+            "type": "integer",
+            "example": 1
+        },
+        "service_date_enable": {
+            "type": "integer",
+            "example": 0
+        },
+        "service_date_type": {
+            "type": "integer",
+            "example": 1
+        },
+        "service_date_value_type_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "service_date": {
+            "type": "string"
+        },
+        "service_date_text": {
+            "type": "string"
+        },
+        "project_id": {
+            "type": "integer",
+            "example": 70
+        },
+        "tax_date": {
+            "type": "string"
+        },
+        "project_name": {
+            "type": "string"
+        },
+        "customer_name": {
+            "type": "string"
+        },
+        "document_status_name": {
+            "type": "string"
+        },
+        "document_category_name": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 3
+                },
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "integer",
+                    "example": 140
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 980
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "term_name": {
+            "type": "string"
+        },
+        "template_name": {
+            "type": "string"
+        },
+        "service_date_type_name": {
+            "type": "string"
+        },
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "example": {
+                    "id": 126345,
+                    "item_id": 8112,
+                    "note": "My item description",
+                    "unit_cost": "40.5261",
+                    "quantity": "1.0000",
+                    "tax1_rate": "19.000",
+                    "tax1_amount": "7.7007",
+                    "position": 1,
+                    "discount_amount": "0.0000",
+                    "total": "48.23",
+                    "base_total": "49.75",
+                    "product_number": "FA-0007",
+                    "product_cost": "19.3000",
+                    "discount_percent": "0.00",
+                    "calc_type": 0,
+                    "gross_price": "48.23",
+                    "item_name": "My item",
+                    "unit": "pcs",
+                    "relations": {
+                        "mileages": [
+                            {
+                                "id": 926,
+                                "project_id": 14545,
+                                "distance": 120,
+                                "rate": 0.5
+                            }
+                        ],
+                        "projectItems": [
+                            {
+                                "id": 1478,
+                                "project_id": 1234
+                            },
+                            {
+                                "id": 1238,
+                                "project_id": 23456
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "tasks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "example": {
+                    "id": 143157,
+                    "task_id": 1569495,
+                    "note": "My task description",
+                    "rate": "2626.560",
+                    "hours": "1.0000",
+                    "tax1_rate": "0.000",
+                    "tax1_amount": "0.0000",
+                    "position": 6,
+                    "discount_amount": "0.0000",
+                    "total": "2626.56",
+                    "base_total": "2709.12",
+                    "discount_percent": "0.00",
+                    "calc_type": 0,
+                    "gross_price": "2626.56",
+                    "task_name": "Expenses",
+                    "unit": "Hour",
+                    "relations": {
+                        "expenses": [
+                            {
+                                "id": 4709,
+                                "project_id": 2754
+                            },
+                            {
+                                "id": 94447,
+                                "project_id": 44736
+                            }
+                        ],
+                        "timeSheets": [
+                            {
+                                "id": 4709,
+                                "project_id": 2754,
+                                "hours": "3.147",
+                                "cost_per_hour": "14.58"
+                            }
+                        ],
+                        "flatProjects": [
+                            2754,
+                            2758
+                        ],
+                        "flatTasks": [
+                            {
+                                "id": 47097,
+                                "project_id": 27544
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

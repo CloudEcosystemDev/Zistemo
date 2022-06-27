@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "action": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "activate",
+                "disactivate"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "description": "Stripe secret key, can be found here https://dashboard.stripe.com/account/apikeys",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "access_token"
+            ]
+        }
+    }
+}

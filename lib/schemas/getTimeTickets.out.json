@@ -1,0 +1,84 @@
+{
+    "type": "array",
+    "description": "Time tickets",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 123
+            },
+            "user_id": {
+                "type": "integer",
+                "example": 2345
+            },
+            "project_id": {
+                "type": "integer",
+                "example": 123
+            },
+            "group_id": {
+                "type": "integer",
+                "example": 123
+            },
+            "task_id": {
+                "type": "integer",
+                "example": 123
+            },
+            "start_date": {
+                "type": "string"
+            },
+            "end_date": {
+                "type": "string"
+            },
+            "width": {
+                "type": "integer",
+                "example": 2
+            },
+            "hours": {
+                "type": "number",
+                "example": 4
+            },
+            "notes": {
+                "type": "string"
+            },
+            "tentative": {
+                "type": "integer",
+                "example": 0
+            },
+            "completed": {
+                "type": "integer",
+                "example": 0
+            },
+            "is_repeat": {
+                "type": "integer",
+                "example": 0
+            },
+            "frequency_period": {
+                "type": "integer",
+                "example": 1
+            },
+            "frequency_type": {
+                "type": "integer",
+                "example": 1
+            },
+            "repeat_id": {
+                "type": "integer"
+            },
+            "repeat_end_date": {
+                "type": "string"
+            },
+            "project_name": {
+                "type": "string"
+            },
+            "task_name": {
+                "type": "string"
+            },
+            "user_name": {
+                "type": "string"
+            },
+            "group_name": {
+                "type": "string"
+            }
+        }
+    }
+}

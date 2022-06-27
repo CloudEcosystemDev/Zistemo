@@ -1,0 +1,60 @@
+{
+    "type": "object",
+    "properties": {
+        "rate": {
+            "type": "number"
+        },
+        "staff_rate": {
+            "type": "number"
+        },
+        "dt": {
+            "type": "string"
+        },
+        "dt_formatted": {
+            "type": "string"
+        },
+        "unit": {
+            "type": "string"
+        },
+        "unit_list": {
+            "type": "object",
+            "example": {
+                "km": "km",
+                "miles": "miles"
+            }
+        },
+        "mileage_types": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "mileage_cars": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 111
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "user_name": {
+            "type": "string"
+        }
+    }
+}

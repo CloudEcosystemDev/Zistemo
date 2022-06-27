@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "tax_id": {
+                    "type": "string"
+                },
+                "registration_id": {
+                    "type": "string"
+                },
+                "currency_id": {
+                    "description": "if 'isCurrencyEditable' = true",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "Company name",
+                    "type": "string"
+                },
+                "time_zone_id": {
+                    "type": "integer"
+                },
+                "date_format_id": {
+                    "type": "integer"
+                },
+                "is_military_time": {
+                    "description": "0 - No. 1 - Yes",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1
+                    ]
+                },
+                "first_week_day": {
+                    "type": "integer"
+                },
+                "language_id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "name",
+                "time_zone_id",
+                "date_format_id",
+                "is_military_time",
+                "first_week_day",
+                "language_id"
+            ]
+        }
+    }
+}

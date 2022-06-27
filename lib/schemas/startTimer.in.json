@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "t[project_id]": {
+                    "description": "Project ID",
+                    "type": "integer"
+                },
+                "t[task_id]": {
+                    "description": "Task ID",
+                    "type": "integer"
+                },
+                "t[task_group_id]": {
+                    "description": "Task Group ID",
+                    "type": "integer"
+                },
+                "t[notes]": {
+                    "description": "Notes",
+                    "type": "string"
+                },
+                "t[lat]": {
+                    "description": "Latitude",
+                    "type": "number"
+                },
+                "t[lng]": {
+                    "description": "Longitude",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "t[project_id]",
+                "t[task_id]",
+                "t[task_group_id]"
+            ]
+        }
+    }
+}

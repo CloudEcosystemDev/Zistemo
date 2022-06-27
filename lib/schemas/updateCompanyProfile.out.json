@@ -1,0 +1,188 @@
+{
+    "type": "object",
+    "properties": {
+        "tax_id": {
+            "type": "string"
+        },
+        "registration_id": {
+            "type": "string"
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 840
+        },
+        "name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "time_zone_id": {
+            "type": "integer",
+            "example": 52
+        },
+        "date_format_id": {
+            "type": "integer",
+            "example": 17
+        },
+        "is_military_time": {
+            "type": "integer",
+            "example": 0
+        },
+        "first_week_day": {
+            "type": "integer",
+            "example": 0
+        },
+        "language_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "language": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "locale": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "native_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "currency": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "number_format": {
+                    "type": "object",
+                    "properties": {
+                        "thousands_sep": {
+                            "type": "string"
+                        },
+                        "dec_point": {
+                            "type": "string"
+                        },
+                        "places": {
+                            "type": "integer",
+                            "example": 2
+                        }
+                    }
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "currencyConfig": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 21
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "code": {
+                    "type": "string"
+                },
+                "symbol": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "is_base_currency": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "last_rate": {
+                    "type": "number"
+                },
+                "last_date": {
+                    "type": "string"
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "currency_format_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "format": {
+                    "type": "string"
+                }
+            }
+        },
+        "dateFormat": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "format": {
+                    "type": "string"
+                },
+                "internal_format": {
+                    "type": "string"
+                },
+                "date_example": {
+                    "type": "string"
+                },
+                "time_example": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "format_translated": {
+                    "type": "string"
+                }
+            }
+        },
+        "timeZone": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 52
+                },
+                "offset": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "string"
+                }
+            }
+        },
+        "isCurrencyEditable": {
+            "type": "boolean",
+            "example": false
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "template_id": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "template_id"
+            ]
+        }
+    }
+}

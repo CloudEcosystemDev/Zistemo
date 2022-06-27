@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "required": [
+        "name"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 123,
+            "format": "int64"
+        },
+        "name": {
+            "type": "string"
+        },
+        "document_category_id": {
+            "type": "integer"
+        },
+        "document_category_name": {
+            "type": "string"
+        },
+        "primary_contact_name": {
+            "type": "string"
+        },
+        "number": {
+            "type": "string"
+        },
+        "last_update_date": {
+            "type": "string"
+        }
+    }
+}

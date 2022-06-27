@@ -1,0 +1,155 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "customer_id",
+                "manager_id",
+                "billing_method_id"
+            ],
+            "properties": {
+                "customer_id": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "manager_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "billing_method_id": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "flat_amount": {
+                    "type": "number"
+                },
+                "rate": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "prefix": {
+                    "type": "string"
+                },
+                "is_budgeted": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "start_date": {
+                    "type": "string"
+                },
+                "end_date": {
+                    "type": "string"
+                },
+                "budget_hours": {
+                    "type": "number"
+                },
+                "budget_cost": {
+                    "type": "number"
+                },
+                "project_budget_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "mileage_rate": {
+                    "type": "number"
+                },
+                "number": {
+                    "type": "string"
+                },
+                "custom_fields": {
+                    "type": "object",
+                    "example": {
+                        "3": "cf1",
+                        "4": "cf2",
+                        "5": "cf3"
+                    }
+                },
+                "tasks": {
+                    "type": "object",
+                    "properties": {
+                        "temp_id_1": {
+                            "type": "object",
+                            "properties": {
+                                "task_id": {
+                                    "type": "integer",
+                                    "example": 40
+                                },
+                                "group_id": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "rate": {
+                                    "type": "number"
+                                },
+                                "budget": {
+                                    "type": "number"
+                                },
+                                "position": {
+                                    "type": "integer",
+                                    "example": 2
+                                },
+                                "billable": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "new_group_id": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "groups": {
+                    "type": "object",
+                    "properties": {
+                        "temp_id_1": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "position": {
+                                    "type": "integer",
+                                    "example": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "users": {
+                    "type": "object",
+                    "properties": {
+                        "temp_id_1": {
+                            "type": "object",
+                            "properties": {
+                                "user_id": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "rate": {
+                                    "type": "number"
+                                },
+                                "budget": {
+                                    "type": "number"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

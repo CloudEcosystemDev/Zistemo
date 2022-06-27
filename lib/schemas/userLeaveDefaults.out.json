@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "leave_types": {
+            "type": "object",
+            "example": {
+                "0": "Vacation",
+                "7855": "Sick leave"
+            }
+        },
+        "substitute_list": {
+            "type": "object",
+            "example": {
+                "123": "John Doe",
+                "234": "Ice Box"
+            }
+        },
+        "day_parts": {
+            "type": "object",
+            "example": {
+                "0": "Morning",
+                "1": "Lunchtime",
+                "2": "Evening"
+            }
+        }
+    }
+}

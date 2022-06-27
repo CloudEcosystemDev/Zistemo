@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of sub-category",
+                    "type": "string"
+                },
+                "parent_id": {
+                    "description": "ID of parent expense category",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "name",
+                "parent_id"
+            ]
+        }
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "type": "object",
+    "properties": {
+        "country": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 228
+                },
+                "code": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "language_id": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "address_type": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "working_hours_data": {
+            "type": "object",
+            "example": {
+                "hours_per_days": [
+                    0,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    0
+                ],
+                "notification": {
+                    "enable": 0,
+                    "vacation_days": 20,
+                    "percent_hours": 80,
+                    "send_to": [],
+                    "send_to_list": {
+                        "All": {
+                            "1:0": "All"
+                        },
+                        "Role": {
+                            "3:admin": "Admin"
+                        },
+                        "User": {
+                            "2:7301": "John Doe"
+                        }
+                    }
+                }
+            }
+        },
+        "teams_list": {
+            "type": "array",
+            "items": {
+                "example": {
+                    "id": 44,
+                    "name": "Dev team"
+                }
+            }
+        },
+        "available_projects": {
+            "type": "array",
+            "items": {
+                "example": {
+                    "id": "4496",
+                    "name": "Test Projekt",
+                    "number": "PR-0001"
+                }
+            }
+        }
+    }
+}

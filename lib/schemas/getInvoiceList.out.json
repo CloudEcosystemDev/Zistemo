@@ -1,0 +1,142 @@
+{
+    "type": "array",
+    "description": "Invoices",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 2292
+            },
+            "user_id": {
+                "type": "integer",
+                "example": 1
+            },
+            "customer_id": {
+                "type": "integer",
+                "example": 1
+            },
+            "language_id": {
+                "type": "integer",
+                "example": 1
+            },
+            "document_status_id": {
+                "type": "integer",
+                "example": 27
+            },
+            "document_category_id": {
+                "type": "integer",
+                "example": 1
+            },
+            "number": {
+                "type": "string"
+            },
+            "issued": {
+                "type": "string"
+            },
+            "discount": {
+                "type": "number"
+            },
+            "total": {
+                "type": "number"
+            },
+            "base_total": {
+                "type": "number"
+            },
+            "terms": {
+                "type": "string"
+            },
+            "notes": {
+                "type": "string"
+            },
+            "currency_id": {
+                "type": "integer",
+                "example": 840
+            },
+            "description": {
+                "type": "string"
+            },
+            "due_date": {
+                "type": "string"
+            },
+            "term_id": {
+                "type": "integer",
+                "example": 3
+            },
+            "template_id": {
+                "type": "integer",
+                "example": 4
+            },
+            "title": {
+                "type": "string"
+            },
+            "internal_note": {
+                "type": "string"
+            },
+            "created": {
+                "type": "string"
+            },
+            "modified": {
+                "type": "string"
+            },
+            "rate": {
+                "type": "number"
+            },
+            "intro": {
+                "type": "string"
+            },
+            "allow_reverse_charge": {
+                "type": "integer",
+                "example": 0
+            },
+            "reverse_charge": {
+                "type": "string"
+            },
+            "send_attachment": {
+                "type": "integer",
+                "example": 0
+            },
+            "cash_discount": {
+                "type": "number"
+            },
+            "cash_discount_days": {
+                "type": "integer",
+                "example": 10
+            },
+            "enable_cash_discount": {
+                "type": "number"
+            },
+            "service_date_enable": {
+                "type": "integer",
+                "example": 0
+            },
+            "service_date_type": {
+                "type": "integer",
+                "example": 1
+            },
+            "service_date_value_type_id": {
+                "type": "integer",
+                "example": 1
+            },
+            "service_date": {
+                "type": "string"
+            },
+            "service_date_text": {
+                "type": "string"
+            },
+            "project_id": {
+                "type": "integer",
+                "example": 2
+            },
+            "tax_date": {
+                "type": "string"
+            },
+            "project_name": {
+                "type": "string"
+            },
+            "customer_name": {
+                "type": "string"
+            }
+        }
+    }
+}

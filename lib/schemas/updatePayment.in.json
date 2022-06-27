@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "payment_date",
+                "payment_amount"
+            ],
+            "properties": {
+                "payment_amount": {
+                    "type": "number"
+                },
+                "payment_date": {
+                    "type": "string"
+                },
+                "pay_with_cash_discount": {
+                    "type": "integer"
+                },
+                "note": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

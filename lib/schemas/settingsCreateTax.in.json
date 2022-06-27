@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name",
+                    "type": "string"
+                },
+                "rate": {
+                    "description": "Tax rate",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "rate"
+            ]
+        }
+    }
+}

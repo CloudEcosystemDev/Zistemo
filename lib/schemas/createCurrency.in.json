@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "c[currency_id]": {
+                    "description": "Get from /currency/notconfigured",
+                    "type": "string"
+                },
+                "c[symbol]": {
+                    "description": "Parameters",
+                    "type": "number"
+                },
+                "c[currency_format_id]": {
+                    "description": "Get from /currency/formats",
+                    "type": "number"
+                },
+                "c[precision]": {
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1,
+                        2
+                    ]
+                }
+            },
+            "required": [
+                "c[currency_id]",
+                "c[symbol]",
+                "c[currency_format_id]"
+            ]
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "logo": {
+                    "description": "The file to upload. Allowed types: jpg, png, jpeg",
+                    "type": "string",
+                    "format": "binary"
+                }
+            },
+            "required": [
+                "logo"
+            ]
+        }
+    }
+}

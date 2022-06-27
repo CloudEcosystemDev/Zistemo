@@ -1,0 +1,216 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 300
+        },
+        "expense_title_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "user_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "expense_category_id": {
+            "type": "integer",
+            "example": 41
+        },
+        "expense_date": {
+            "type": "string"
+        },
+        "amount": {
+            "type": "number"
+        },
+        "base_amount": {
+            "type": "number"
+        },
+        "taxes": {
+            "type": "integer",
+            "example": 0
+        },
+        "tax1_id": {
+            "type": "integer",
+            "example": 2
+        },
+        "tax1_rate": {
+            "type": "number"
+        },
+        "tax1_amount": {
+            "type": "number"
+        },
+        "vendor_id": {
+            "type": "integer",
+            "example": 71
+        },
+        "customer_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "project_id": {
+            "type": "integer",
+            "example": 2
+        },
+        "note": {
+            "type": "string"
+        },
+        "receipt": {
+            "type": "string"
+        },
+        "document_status_id": {
+            "type": "integer",
+            "example": 28
+        },
+        "document_category_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "created": {
+            "type": "string"
+        },
+        "modified": {
+            "type": "string"
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 840
+        },
+        "name": {
+            "type": "string"
+        },
+        "rate": {
+            "type": "number"
+        },
+        "billable": {
+            "type": "integer",
+            "example": 1
+        },
+        "uploaded_receipt_name": {
+            "type": "string"
+        },
+        "surcharge_enabled": {
+            "type": "integer",
+            "example": 0
+        },
+        "surcharge_type": {
+            "type": "integer",
+            "example": 0
+        },
+        "surcharge_value": {
+            "type": "number"
+        },
+        "paid_by_author": {
+            "type": "integer",
+            "example": 1
+        },
+        "reimbursed": {
+            "type": "integer",
+            "example": 0
+        },
+        "is_paid": {
+            "type": "integer",
+            "example": 1
+        },
+        "amount_formatted": {
+            "type": "number"
+        },
+        "expense_date_formatted": {
+            "type": "string"
+        },
+        "is_assigned_to_client": {
+            "type": "integer",
+            "example": 1
+        },
+        "vendor_name": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "array",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "number_format": {
+                    "type": "object",
+                    "properties": {
+                        "thousands_sep": {
+                            "type": "string"
+                        },
+                        "dec_point": {
+                            "type": "string"
+                        },
+                        "places": {
+                            "type": "integer",
+                            "example": 2
+                        }
+                    }
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            },
+            "items": {}
+        },
+        "expenseCategory": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 41
+                },
+                "parent_id": {
+                    "type": "integer",
+                    "example": 39
+                },
+                "name": {
+                    "type": "string"
+                },
+                "is_asset": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "self_created": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "parent_category": {
+                    "type": "object"
+                }
+            }
+        },
+        "document_category_name": {
+            "type": "string"
+        },
+        "document_status_name": {
+            "type": "string"
+        },
+        "customer_name": {
+            "type": "string"
+        },
+        "project_name": {
+            "type": "string"
+        },
+        "user_name": {
+            "type": "string"
+        },
+        "tax1_name": {
+            "type": "string"
+        },
+        "surcharge_amount": {
+            "type": "number",
+            "example": 0
+        }
+    }
+}

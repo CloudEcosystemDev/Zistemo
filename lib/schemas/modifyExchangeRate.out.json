@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "base_currency_id": {
+            "type": "integer",
+            "example": 840
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 978
+        },
+        "rate_date": {
+            "type": "string"
+        },
+        "rate_date_formatted": {
+            "type": "string"
+        },
+        "rate": {
+            "type": "number"
+        },
+        "baseCurrencyCode": {
+            "type": "string"
+        },
+        "currencyCode": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 1
+            },
+            "format": {
+                "type": "string"
+            },
+            "current_number": {
+                "type": "string"
+            },
+            "preview": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "name_translated": {
+                "type": "string"
+            }
+        }
+    }
+}

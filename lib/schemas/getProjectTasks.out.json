@@ -1,0 +1,20 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string"
+            },
+            "group_id": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "group_name": {
+                "type": "string"
+            }
+        }
+    }
+}

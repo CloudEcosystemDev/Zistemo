@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "format": {
+                    "description": "String, max length 64 char.",
+                    "type": "string"
+                },
+                "current_number": {
+                    "description": "allowed characters 0-9",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "format",
+                "current_number"
+            ]
+        }
+    }
+}

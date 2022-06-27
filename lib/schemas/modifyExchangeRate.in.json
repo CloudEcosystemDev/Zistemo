@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "minimum": 1
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "c[rate_date]": {
+                    "description": "Parameters",
+                    "type": "string"
+                },
+                "c[rate]": {
+                    "description": "Parameters",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "c[rate_date]",
+                "c[rate]"
+            ]
+        }
+    }
+}

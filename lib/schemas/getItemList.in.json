@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "document_category_id": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                1,
+                2,
+                3
+            ]
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "code": {
+                "type": "string"
+            },
+            "format": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "number_format": {
+                "type": "object",
+                "properties": {
+                    "thousands_sep": {
+                        "type": "string"
+                    },
+                    "dec_point": {
+                        "type": "string"
+                    },
+                    "places": {
+                        "type": "integer",
+                        "example": 2
+                    }
+                }
+            },
+            "currency_id": {
+                "type": "integer",
+                "example": 840
+            },
+            "precision": {
+                "type": "integer",
+                "example": 2
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "only_taxes": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        },
+        "include_ids": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

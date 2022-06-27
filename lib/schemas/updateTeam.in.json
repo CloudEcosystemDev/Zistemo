@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "leader_id",
+                "member_ids"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "leader_id": {
+                    "type": "integer",
+                    "example": 22
+                },
+                "member_ids": {
+                    "type": "array",
+                    "example": [
+                        1,
+                        2,
+                        3
+                    ],
+                    "description": "List of member IDs",
+                    "items": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            }
+        }
+    }
+}

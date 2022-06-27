@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "name",
+                "rate",
+                "billable"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "billable": {
+                    "type": "boolean"
+                },
+                "rate": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "tax_id": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

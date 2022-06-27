@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "show_inactive": {
+            "required": true,
+            "type": "boolean"
+        }
+    }
+}

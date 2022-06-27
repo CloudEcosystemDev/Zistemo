@@ -1,0 +1,219 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "language_id": {
+            "type": "integer"
+        },
+        "currency_id": {
+            "type": "integer"
+        },
+        "registration_id": {
+            "type": "number"
+        },
+        "tax_id": {
+            "type": "string"
+        },
+        "bank_name": {
+            "type": "string"
+        },
+        "bank_code": {
+            "type": "string"
+        },
+        "account_number": {
+            "type": "string"
+        },
+        "account_holder": {
+            "type": "string"
+        },
+        "notes": {
+            "type": "string"
+        },
+        "is_blocked": {
+            "type": "boolean",
+            "example": 0
+        },
+        "is_shipping_same_as_billing": {
+            "type": "boolean"
+        },
+        "primary_contact_id": {
+            "type": "integer"
+        },
+        "has_logo": {
+            "type": "boolean",
+            "example": false
+        },
+        "number": {
+            "type": "string"
+        },
+        "document_category_name": {
+            "type": "string"
+        },
+        "language_name": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "number_format": {
+                    "type": "object",
+                    "properties": {
+                        "thousands_sep": {
+                            "type": "string"
+                        },
+                        "dec_point": {
+                            "type": "string"
+                        },
+                        "places": {
+                            "type": "integer",
+                            "example": 2
+                        }
+                    }
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "users": {
+            "type": "array",
+            "description": "Information about the contact(s) of the vendors",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1992
+                    },
+                    "first_name": {
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "mobile": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "fax": {
+                        "type": "string"
+                    },
+                    "position": {
+                        "type": "string"
+                    },
+                    "department": {
+                        "type": "string"
+                    },
+                    "salutation": {
+                        "type": "string"
+                    },
+                    "is_primary": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        },
+        "billing_address": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 183
+                },
+                "country_id": {
+                    "type": "integer"
+                },
+                "address1": {
+                    "type": "string"
+                },
+                "address2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "fax": {
+                    "type": "string"
+                },
+                "country_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "shipping_address": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 183
+                },
+                "country_id": {
+                    "type": "integer"
+                },
+                "address1": {
+                    "type": "string"
+                },
+                "address2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "fax": {
+                    "type": "string"
+                },
+                "country_name": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

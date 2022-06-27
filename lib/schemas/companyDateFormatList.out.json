@@ -1,0 +1,30 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 1
+            },
+            "format": {
+                "type": "string"
+            },
+            "internal_format": {
+                "type": "string"
+            },
+            "date_example": {
+                "type": "string"
+            },
+            "time_example": {
+                "type": "string"
+            },
+            "type": {
+                "type": "string"
+            },
+            "format_translated": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "project_id": {
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "task_id": {
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "user_id": {
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "project_name": {
+            "required": false,
+            "type": "string"
+        },
+        "project_number": {
+            "required": false,
+            "type": "string"
+        },
+        "task_name": {
+            "required": false,
+            "type": "string"
+        },
+        "group_name": {
+            "required": false,
+            "type": "string"
+        },
+        "date_from": {
+            "required": false,
+            "type": "string"
+        },
+        "date_to": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

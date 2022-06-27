@@ -1,0 +1,26 @@
+{
+    "type": "array",
+    "items": {
+        "title": "Task",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 23
+            },
+            "name": {
+                "type": "string"
+            },
+            "billable": {
+                "type": "boolean",
+                "example": 1
+            },
+            "rate": {
+                "type": "number"
+            },
+            "description": {
+                "type": "string"
+            }
+        }
+    }
+}

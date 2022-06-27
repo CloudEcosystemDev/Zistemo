@@ -1,0 +1,122 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "first_name",
+                "last_name",
+                "email",
+                "role"
+            ],
+            "properties": {
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "cost": {
+                    "type": "string"
+                },
+                "rate": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "hours_per_day": {
+                    "type": "string"
+                },
+                "mileage_rate": {
+                    "type": "number",
+                    "example": 4.56
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "allow_create_task": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "presence_hours_limit": {
+                    "type": "integer",
+                    "example": 9
+                },
+                "send_presence_reminder": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "address": {
+                    "type": "object",
+                    "properties": {
+                        "country_id": {
+                            "type": "integer"
+                        },
+                        "address1": {
+                            "type": "string"
+                        },
+                        "address2": {
+                            "type": "string"
+                        },
+                        "city": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        },
+                        "zip": {
+                            "type": "string"
+                        },
+                        "phone": {
+                            "type": "string"
+                        },
+                        "mobile": {
+                            "type": "string"
+                        },
+                        "fax": {
+                            "type": "string"
+                        },
+                        "country_name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "team_id": {
+                    "type": "integer",
+                    "example": 44
+                },
+                "assigned_projects": {
+                    "type": "integer",
+                    "example": 44
+                },
+                "working_hours_data": {
+                    "type": "object",
+                    "example": {
+                        "hours_per_days": [
+                            0,
+                            8,
+                            8,
+                            8,
+                            8,
+                            8,
+                            0
+                        ],
+                        "notification": {
+                            "enable": 0,
+                            "vacation_days": 20,
+                            "percent_hours": 80,
+                            "send_to": []
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

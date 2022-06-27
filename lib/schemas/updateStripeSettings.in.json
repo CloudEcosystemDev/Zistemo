@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "access_token": {
+                    "description": "Stripe secret key, can be found here https://dashboard.stripe.com/account/apikeys",
+                    "type": "string"
+                },
+                "stripe_publishable_key": {
+                    "description": "Stripe publishable key, can be found here https://dashboard.stripe.com/account/apikeys",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "access_token",
+                "stripe_publishable_key"
+            ]
+        }
+    }
+}

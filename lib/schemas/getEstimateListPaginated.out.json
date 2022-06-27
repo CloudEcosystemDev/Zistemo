@@ -1,0 +1,119 @@
+{
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 2292
+                    },
+                    "customer_id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "document_status_id": {
+                        "type": "integer",
+                        "example": 27
+                    },
+                    "document_category_id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "number": {
+                        "type": "string"
+                    },
+                    "issued": {
+                        "type": "string"
+                    },
+                    "total": {
+                        "type": "number"
+                    },
+                    "base_total": {
+                        "type": "number"
+                    },
+                    "rate": {
+                        "type": "number"
+                    },
+                    "currency_id": {
+                        "type": "integer",
+                        "example": 840
+                    },
+                    "valid_until": {
+                        "type": "string"
+                    },
+                    "created": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "customer_name": {
+                        "type": "string"
+                    },
+                    "issued_formatted": {
+                        "type": "string"
+                    },
+                    "valid_until_formatted": {
+                        "type": "string"
+                    },
+                    "document_category_name": {
+                        "type": "string"
+                    },
+                    "currency": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string"
+                            },
+                            "format": {
+                                "type": "string"
+                            },
+                            "places": {
+                                "type": "integer"
+                            },
+                            "thousands_sep": {
+                                "type": "string"
+                            },
+                            "dec_point": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "document_status_name": {
+                        "type": "string"
+                    },
+                    "document_status_color": {
+                        "type": "string"
+                    },
+                    "expired": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        },
+        "_meta": {
+            "type": "object",
+            "properties": {
+                "totalCount": {
+                    "type": "integer",
+                    "example": 100
+                },
+                "pageCount": {
+                    "type": "integer",
+                    "example": 10
+                },
+                "currentPage": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "perPage": {
+                    "type": "integer",
+                    "example": 10
+                }
+            }
+        }
+    }
+}

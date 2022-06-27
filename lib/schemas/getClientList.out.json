@@ -1,0 +1,43 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "name"
+        ],
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 123,
+                "format": "int64"
+            },
+            "name": {
+                "type": "string"
+            },
+            "document_category_id": {
+                "type": "integer"
+            },
+            "document_category_name": {
+                "type": "string"
+            },
+            "projects_count": {
+                "type": "integer"
+            },
+            "primary_contact_id": {
+                "type": "integer"
+            },
+            "primary_contact_name": {
+                "type": "string"
+            },
+            "number": {
+                "type": "string"
+            },
+            "datev_id": {
+                "type": "integer"
+            },
+            "last_update_date": {
+                "type": "string"
+            }
+        }
+    }
+}

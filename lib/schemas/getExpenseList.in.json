@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "category": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "active",
+                "archived",
+                "deleted",
+                "all"
+            ],
+            "default": "all"
+        },
+        "modified_from": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_to": {
+            "required": false,
+            "type": "string"
+        },
+        "project_id": {
+            "required": false,
+            "type": "string"
+        },
+        "customer_id": {
+            "required": false,
+            "type": "string"
+        },
+        "user_id": {
+            "required": false,
+            "type": "string"
+        },
+        "vendor_name": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "current_id": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

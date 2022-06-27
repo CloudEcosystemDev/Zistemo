@@ -1,0 +1,10 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "example": {
+            "id": 1,
+            "name": "Hourly Staff Rate"
+        }
+    }
+}

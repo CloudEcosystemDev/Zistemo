@@ -1,0 +1,101 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 1
+        },
+        "invoice_id": {
+            "type": "integer",
+            "example": 123
+        },
+        "payment_method_id": {
+            "type": "integer",
+            "example": 19
+        },
+        "payment_amount": {
+            "type": "number"
+        },
+        "base_amount": {
+            "type": "number"
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 840
+        },
+        "payment_date": {
+            "type": "string"
+        },
+        "note": {
+            "type": "string"
+        },
+        "is_manual": {
+            "type": "integer",
+            "example": 1
+        },
+        "is_debt": {
+            "type": "integer",
+            "example": 0
+        },
+        "debt_payment_id": {
+            "type": "integer"
+        },
+        "customer_id": {
+            "type": "integer"
+        },
+        "title": {
+            "type": "string"
+        },
+        "tax_id": {
+            "type": "integer"
+        },
+        "number": {
+            "type": "string"
+        },
+        "issued": {
+            "type": "string"
+        },
+        "booking_account_id": {
+            "type": "integer"
+        },
+        "invoice_number": {
+            "type": "string"
+        },
+        "customer_name": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 3
+                },
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "integer",
+                    "example": 140
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 980
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "payment_method_name": {
+            "type": "string"
+        }
+    }
+}

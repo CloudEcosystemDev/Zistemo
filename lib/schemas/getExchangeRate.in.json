@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "minimum": 1
+        },
+        "date": {
+            "required": false,
+            "type": "string"
+        },
+        "all": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

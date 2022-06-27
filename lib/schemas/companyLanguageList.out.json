@@ -1,0 +1,21 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 1
+            },
+            "locale": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "native_name": {
+                "type": "string"
+            }
+        }
+    }
+}

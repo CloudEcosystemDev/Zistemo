@@ -1,0 +1,93 @@
+{
+    "type": "object",
+    "properties": {
+        "available_leaders": {
+            "type": "array",
+            "description": "list of members who can be used as leader",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1992
+                    },
+                    "first_name": {
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "has_logo": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "role": {
+                        "type": "string"
+                    },
+                    "position": {
+                        "type": "string"
+                    },
+                    "presence_status": {
+                        "type": "string"
+                    },
+                    "presence_status_translated": {
+                        "type": "string"
+                    },
+                    "timer_status": {
+                        "type": "string"
+                    },
+                    "gravatar_url": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "available_members": {
+            "type": "array",
+            "description": "members who can be added to anew team",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1992
+                    },
+                    "first_name": {
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "has_logo": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "role": {
+                        "type": "string"
+                    },
+                    "position": {
+                        "type": "string"
+                    },
+                    "presence_status": {
+                        "type": "string"
+                    },
+                    "presence_status_translated": {
+                        "type": "string"
+                    },
+                    "timer_status": {
+                        "type": "string"
+                    },
+                    "gravatar_url": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "ts[user_id]": {
+                    "description": "User ID. Default value is id of authorized user",
+                    "type": "integer"
+                },
+                "ts[log_date]": {
+                    "description": "Date",
+                    "type": "string"
+                },
+                "ts[task_id]": {
+                    "description": "Task ID",
+                    "type": "integer"
+                },
+                "ts[task_group_id]": {
+                    "description": "Task Group ID",
+                    "type": "integer"
+                },
+                "ts[project_id]": {
+                    "description": "Project ID",
+                    "type": "integer"
+                },
+                "ts[hours]": {
+                    "description": "Has limit 24 hours per one day for each use",
+                    "type": "number"
+                },
+                "ts[notes]": {
+                    "description": "Notes",
+                    "type": "string"
+                },
+                "ts[start_time]": {
+                    "description": "date format 'Y-m-d H:i:s'",
+                    "type": "string"
+                },
+                "t[stop_time]": {
+                    "description": "date format 'Y-m-d H:i:s'",
+                    "type": "string"
+                },
+                "ts[lat]": {
+                    "description": "latitudes range from -90 to +90",
+                    "type": "number"
+                },
+                "t[lng]": {
+                    "description": "longitudes range from -180 to +180",
+                    "type": "number"
+                },
+                "ts[project_schedule_id]": {
+                    "description": "Time Ticket ID",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "ts[log_date]",
+                "ts[task_id]"
+            ]
+        }
+    }
+}

@@ -1,0 +1,162 @@
+{
+    "type": "object",
+    "properties": {
+        "user": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 239
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "has_logo": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "role": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "timer_status": {
+                    "type": "string"
+                },
+                "timer_object": {
+                    "type": "object",
+                    "properties": {
+                        "project_id": {
+                            "type": "string"
+                        },
+                        "task_id": {
+                            "type": "string"
+                        },
+                        "customer_id": {
+                            "type": "string"
+                        },
+                        "start_time": {
+                            "type": "string"
+                        },
+                        "customer_name": {
+                            "type": "string"
+                        },
+                        "projectName": {
+                            "type": "string"
+                        },
+                        "taskName": {
+                            "type": "string"
+                        },
+                        "paused": {
+                            "type": "string"
+                        },
+                        "hours": {
+                            "type": "number",
+                            "example": 0.01
+                        },
+                        "start_time_formatted": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "gravatar_url": {
+                    "type": "string"
+                }
+            }
+        },
+        "week_data": {
+            "type": "object",
+            "properties": {
+                "hours": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "billable": {
+                    "type": "integer",
+                    "example": 0
+                },
+                "non_billable": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "date_range": {
+                    "type": "string"
+                },
+                "billable_percent": {
+                    "type": "number",
+                    "example": 0
+                },
+                "non_billable_percent": {
+                    "type": "number",
+                    "example": 4.9
+                },
+                "capacity": {
+                    "type": "number",
+                    "example": 40.8
+                },
+                "days": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "title": "Day",
+                        "properties": {
+                            "log_date": {
+                                "type": "string"
+                            },
+                            "hours": {
+                                "type": "number"
+                            },
+                            "week_day_name_2": {
+                                "type": "string"
+                            },
+                            "week_day_name_3": {
+                                "type": "string"
+                            },
+                            "day_in_month": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "approve_status": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "type": "string"
+                },
+                "allowed_actions": {
+                    "type": "array",
+                    "example": [
+                        "reject",
+                        "approve",
+                        "add_note",
+                        "send_email"
+                    ],
+                    "items": {}
+                },
+                "enabled": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

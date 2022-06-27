@@ -1,0 +1,91 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 1
+        },
+        "first_name": {
+            "type": "string"
+        },
+        "last_name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "has_logo": {
+            "type": "boolean",
+            "example": true
+        },
+        "position": {
+            "type": "string"
+        },
+        "presence_status": {
+            "type": "string"
+        },
+        "gravatar_url": {
+            "type": "string"
+        },
+        "clock_in": {
+            "type": "string"
+        },
+        "work_time": {
+            "type": "string"
+        },
+        "break_time": {
+            "type": "string"
+        },
+        "pending_requests": {
+            "type": "integer"
+        },
+        "pending_approval_requests": {
+            "type": "integer",
+            "example": 0
+        },
+        "time_balance": {
+            "type": "string"
+        },
+        "flextime_type_id": {
+            "type": "string"
+        },
+        "color": {
+            "type": "string"
+        },
+        "clock_in_status": {
+            "type": "string"
+        },
+        "clock_in_status_name": {
+            "type": "string"
+        },
+        "show_balance": {
+            "type": "boolean",
+            "example": true
+        },
+        "balance_color": {
+            "type": "string"
+        },
+        "vacation": {
+            "type": "object",
+            "title": "Vacation",
+            "properties": {
+                "remaining": {
+                    "type": "number",
+                    "example": 20.5
+                },
+                "vacation_taken": {
+                    "type": "number",
+                    "example": 0.5
+                },
+                "vacation_pending": {
+                    "type": "number",
+                    "example": 4
+                },
+                "vacation_plan": {
+                    "type": "number",
+                    "example": 0
+                }
+            }
+        }
+    }
+}

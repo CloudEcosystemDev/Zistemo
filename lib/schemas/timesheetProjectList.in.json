@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "user_id": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

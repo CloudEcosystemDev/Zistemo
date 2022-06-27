@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "show_inactive": {
+            "required": false,
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ]
+        }
+    }
+}

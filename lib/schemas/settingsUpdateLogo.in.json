@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "logo": {
+                    "description": "The file to upload",
+                    "type": "string",
+                    "format": "binary"
+                }
+            },
+            "required": [
+                "logo"
+            ]
+        }
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "type": "object",
+    "properties": {
+        "customer_id": {
+            "type": "integer",
+            "example": 0
+        },
+        "customer_name": {
+            "type": "string"
+        },
+        "manager_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "manager_name": {
+            "type": "string"
+        },
+        "number": {
+            "type": "string"
+        },
+        "billing_method_id": {
+            "type": "integer",
+            "example": 2
+        },
+        "billing_method_name": {
+            "type": "string"
+        },
+        "custom_fields": {
+            "type": "array",
+            "items": {
+                "title": "Custom field",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "billing_methods": {
+            "type": "array",
+            "items": {
+                "title": "Billing method",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 2
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "budget_methods": {
+            "type": "array",
+            "items": {
+                "title": "Budget method",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

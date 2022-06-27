@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "category": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "active",
+                "archived",
+                "deleted",
+                "all"
+            ]
+        },
+        "modified_from": {
+            "required": false,
+            "type": "string"
+        },
+        "modified_to": {
+            "required": false,
+            "type": "string"
+        },
+        "issued_from": {
+            "required": false,
+            "type": "string"
+        },
+        "issued_to": {
+            "required": false,
+            "type": "string"
+        },
+        "project_name": {
+            "required": false,
+            "type": "string"
+        },
+        "customer_name": {
+            "required": false,
+            "type": "string"
+        },
+        "customer_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "project_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "paid",
+                "unpaid"
+            ]
+        }
+    }
+}

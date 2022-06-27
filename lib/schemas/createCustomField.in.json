@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "client",
+                "project"
+            ]
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Custom field name. Maximum length - 32.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        }
+    }
+}

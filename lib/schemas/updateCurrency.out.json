@@ -1,0 +1,54 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 23
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 44
+        },
+        "code": {
+            "type": "string"
+        },
+        "symbol": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "is_base_currency": {
+            "type": "boolean",
+            "example": false
+        },
+        "last_rate": {
+            "type": "number",
+            "example": 0.092
+        },
+        "last_date": {
+            "type": "string"
+        },
+        "precision": {
+            "type": "integer",
+            "example": 2
+        },
+        "currency_format_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "format": {
+            "type": "string"
+        },
+        "last_date_formatted": {
+            "type": "string"
+        },
+        "number_format": {
+            "type": "object",
+            "example": {
+                "thousands_sep": ".",
+                "dec_point": ","
+            }
+        }
+    }
+}

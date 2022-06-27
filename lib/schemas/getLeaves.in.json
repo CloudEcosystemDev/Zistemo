@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "user_id": {
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "year": {
+            "required": false,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        }
+    }
+}

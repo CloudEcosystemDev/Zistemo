@@ -1,0 +1,151 @@
+{
+    "type": "object",
+    "properties": {
+        "gaps": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1036
+                    },
+                    "start_time": {
+                        "type": "string"
+                    },
+                    "stop_time": {
+                        "type": "string"
+                    },
+                    "notes": {
+                        "type": "string"
+                    },
+                    "lat": {
+                        "type": "number",
+                        "example": 5.1234
+                    },
+                    "lng": {
+                        "type": "number",
+                        "example": 7.9876
+                    },
+                    "time_zone_id": {
+                        "type": "integer",
+                        "example": 4
+                    },
+                    "project_schedule_id": {
+                        "type": "integer",
+                        "example": 123
+                    }
+                }
+            }
+        },
+        "notes": {
+            "type": "string"
+        },
+        "start_timestamp": {
+            "type": "integer",
+            "example": 1440080255
+        },
+        "current_timestamp": {
+            "type": "integer",
+            "example": 1440080430
+        },
+        "is_stopped": {
+            "type": "boolean",
+            "example": false
+        },
+        "status": {
+            "type": "string"
+        },
+        "project_id": {
+            "type": "integer",
+            "example": 26
+        },
+        "task_id": {
+            "type": "integer",
+            "example": 29
+        },
+        "current_gap": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 1036
+                },
+                "start_time": {
+                    "type": "string"
+                },
+                "stop_time": {
+                    "type": "string"
+                },
+                "notes": {
+                    "type": "string"
+                },
+                "lat": {
+                    "type": "number",
+                    "example": 5.1234
+                },
+                "lng": {
+                    "type": "number",
+                    "example": 7.9876
+                },
+                "time_zone_id": {
+                    "type": "integer",
+                    "example": 4
+                },
+                "project_schedule_id": {
+                    "type": "integer",
+                    "example": 123
+                }
+            }
+        },
+        "task_name": {
+            "type": "string"
+        },
+        "task_group_name": {
+            "type": "string"
+        },
+        "project_name": {
+            "type": "string"
+        },
+        "customer_name": {
+            "type": "string"
+        },
+        "adjustment": {
+            "type": "integer",
+            "example": 0
+        },
+        "task_group_id": {
+            "type": "integer",
+            "example": 0
+        },
+        "lat": {
+            "type": "number",
+            "example": 5.1234
+        },
+        "lng": {
+            "type": "number",
+            "example": 7.9876
+        },
+        "hint": {
+            "type": "string"
+        },
+        "project_application_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "project_schedule_id": {
+            "type": "integer",
+            "example": 123
+        },
+        "user_id": {
+            "type": "integer",
+            "example": 789
+        },
+        "external_project_id": {
+            "type": "string"
+        },
+        "external_task_id": {
+            "type": "string"
+        }
+    }
+}

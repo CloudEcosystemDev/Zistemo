@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "expense_date": {
+                    "description": "Date",
+                    "type": "string"
+                },
+                "amount": {
+                    "description": "Parameters",
+                    "type": "number"
+                },
+                "vendor_id": {
+                    "description": "Parameters",
+                    "type": "integer"
+                },
+                "vendor_name": {
+                    "description": "Parameters",
+                    "type": "string"
+                },
+                "note": {
+                    "description": "Parameters",
+                    "type": "integer"
+                },
+                "currency_id": {
+                    "description": "Parameters",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "Parameters",
+                    "type": "string"
+                },
+                "rate": {
+                    "description": "Parameters",
+                    "type": "number"
+                },
+                "expense_category_id": {
+                    "description": "Parameters",
+                    "type": "integer",
+                    "default": 1
+                },
+                "project_id": {
+                    "description": "Parameters",
+                    "type": "integer"
+                },
+                "customer_id": {
+                    "description": "Parameters",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "expense_date",
+                "amount",
+                "vendor_id",
+                "vendor_name"
+            ]
+        }
+    }
+}

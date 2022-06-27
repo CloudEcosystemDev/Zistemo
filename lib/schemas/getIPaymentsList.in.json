@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "date_from": {
+            "required": false,
+            "type": "string"
+        },
+        "date_to": {
+            "required": false,
+            "type": "string"
+        },
+        "amount_from": {
+            "required": false,
+            "type": "string"
+        },
+        "amount_to": {
+            "required": false,
+            "type": "string"
+        },
+        "currency_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "invoice_id": {
+            "required": false,
+            "type": "integer"
+        },
+        "customer_name": {
+            "required": false,
+            "type": "string"
+        },
+        "note": {
+            "required": false,
+            "type": "string"
+        },
+        "payment_method": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

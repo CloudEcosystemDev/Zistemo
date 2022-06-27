@@ -1,0 +1,31 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 73
+            },
+            "first_name": {
+                "type": "string"
+            },
+            "last_name": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string"
+            },
+            "has_logo": {
+                "type": "boolean",
+                "example": false
+            },
+            "role": {
+                "type": "string"
+            },
+            "active": {
+                "type": "integer"
+            }
+        }
+    }
+}

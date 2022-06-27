@@ -1,0 +1,221 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 7301
+        },
+        "first_name": {
+            "type": "string"
+        },
+        "last_name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "has_logo": {
+            "type": "boolean",
+            "example": false
+        },
+        "role": {
+            "type": "string"
+        },
+        "is_owner": {
+            "type": "boolean",
+            "example": true
+        },
+        "active": {
+            "type": "integer",
+            "example": 1
+        },
+        "cost": {
+            "type": "number"
+        },
+        "rate": {
+            "type": "number"
+        },
+        "position": {
+            "type": "string"
+        },
+        "presence_status": {
+            "type": "string"
+        },
+        "presence_status_translated": {
+            "type": "string"
+        },
+        "timer_status": {
+            "type": "string"
+        },
+        "timer_object": {
+            "type": "array",
+            "properties": {
+                "project_id": {
+                    "type": "string"
+                },
+                "task_id": {
+                    "type": "string"
+                },
+                "customer_id": {
+                    "type": "string"
+                },
+                "start_time": {
+                    "type": "string"
+                },
+                "customer_name": {
+                    "type": "string"
+                },
+                "projectName": {
+                    "type": "string"
+                },
+                "taskName": {
+                    "type": "string"
+                },
+                "paused": {
+                    "type": "string"
+                },
+                "hours": {
+                    "type": "number",
+                    "example": 0.01
+                },
+                "start_time_formatted": {
+                    "type": "string"
+                }
+            },
+            "items": {}
+        },
+        "address": {
+            "type": "array",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "example": 183
+                },
+                "country_id": {
+                    "type": "integer"
+                },
+                "address1": {
+                    "type": "string"
+                },
+                "address2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "fax": {
+                    "type": "string"
+                },
+                "country_name": {
+                    "type": "string"
+                }
+            },
+            "items": {}
+        },
+        "gravatar_url": {
+            "type": "string"
+        },
+        "allow_edit_ts": {
+            "type": "integer",
+            "example": 1
+        },
+        "send_presence_reminder": {
+            "type": "integer",
+            "example": 0
+        },
+        "presence_hours_limit": {
+            "type": "integer",
+            "example": 8
+        },
+        "team_id": {
+            "type": "integer",
+            "example": 44
+        },
+        "hours_per_day": {
+            "type": "number"
+        },
+        "mileage_rate": {
+            "type": "number"
+        },
+        "notes": {
+            "type": "string"
+        },
+        "allow_create_task": {
+            "type": "integer",
+            "example": 0
+        },
+        "working_hours_data": {
+            "type": "object",
+            "example": {
+                "hours_per_days": [
+                    0,
+                    8,
+                    8,
+                    8,
+                    8,
+                    8,
+                    0
+                ],
+                "notification": {
+                    "enable": 0,
+                    "vacation_days": 20,
+                    "percent_hours": 80,
+                    "send_to": [],
+                    "send_to_list": {
+                        "All": {
+                            "1:0": "All"
+                        },
+                        "Role": {
+                            "3:admin": "Admin"
+                        },
+                        "User": {
+                            "2:7301": "John Doe"
+                        }
+                    }
+                }
+            }
+        },
+        "teams_list": {
+            "type": "array",
+            "items": {
+                "example": {
+                    "id": 44,
+                    "name": "Dev team"
+                }
+            }
+        },
+        "assigned_projects": {
+            "type": "array",
+            "items": {
+                "example": {
+                    "id": "4496",
+                    "name": "Test Projekt",
+                    "number": "PR-0001",
+                    "has_logged_hours": "0"
+                }
+            }
+        },
+        "available_projects": {
+            "type": "array",
+            "items": {
+                "example": {
+                    "id": "5225",
+                    "name": "Test project 2",
+                    "number": "PR-0002"
+                }
+            }
+        }
+    }
+}

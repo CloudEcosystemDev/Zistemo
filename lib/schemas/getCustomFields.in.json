@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "client",
+                "project"
+            ]
+        }
+    }
+}

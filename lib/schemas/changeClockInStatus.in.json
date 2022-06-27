@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "description": "Statuses 'on-site', 'off-site' requires lat and lng params.",
+                    "type": "string",
+                    "enum": [
+                        "on-site",
+                        "off-site",
+                        "off-time",
+                        "break",
+                        "end-break"
+                    ]
+                },
+                "lat": {
+                    "description": "latitude, allowed values from -90 to 90",
+                    "type": "number"
+                },
+                "lng": {
+                    "description": "longitude, allowed values from -180 to 180",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "status"
+            ]
+        }
+    }
+}

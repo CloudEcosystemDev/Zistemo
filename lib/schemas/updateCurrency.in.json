@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "c[symbol]": {
+                    "description": "Parameters",
+                    "type": "number"
+                },
+                "c[currency_format_id]": {
+                    "description": "Get from /currency/formats",
+                    "type": "number"
+                },
+                "c[precision]": {
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1,
+                        2
+                    ]
+                }
+            }
+        }
+    }
+}

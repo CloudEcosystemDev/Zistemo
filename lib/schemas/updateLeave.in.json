@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "user_id",
+                "leave_type_id",
+                "leave_start_date",
+                "leave_end_date",
+                "leave_start_type",
+                "leave_end_type"
+            ],
+            "properties": {
+                "user_id": {
+                    "type": "integer"
+                },
+                "leave_type_id": {
+                    "type": "integer"
+                },
+                "leave_start_date": {
+                    "type": "string"
+                },
+                "leave_end_date": {
+                    "type": "string"
+                },
+                "leave_start_type": {
+                    "type": "integer"
+                },
+                "leave_end_type": {
+                    "type": "integer"
+                },
+                "replacement_user_id": {
+                    "type": "integer"
+                },
+                "note": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,328 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 31510
+        },
+        "customer_id": {
+            "type": "integer",
+            "example": 0
+        },
+        "manager_id": {
+            "type": "integer",
+            "example": 24597
+        },
+        "billing_method_id": {
+            "type": "integer",
+            "example": 3
+        },
+        "flat_amount": {
+            "type": "number",
+            "example": 0
+        },
+        "rate": {
+            "type": "number",
+            "example": 0
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "document_category_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "prefix": {
+            "type": "string"
+        },
+        "is_budgeted": {
+            "type": "boolean",
+            "example": 0
+        },
+        "start_date": {
+            "type": "string"
+        },
+        "end_date": {
+            "type": "string"
+        },
+        "budget_hours": {
+            "type": "string"
+        },
+        "budget_cost": {
+            "type": "string"
+        },
+        "project_budget_id": {
+            "type": "integer",
+            "example": 0
+        },
+        "currency_id": {
+            "type": "integer",
+            "example": 978
+        },
+        "mileage_rate": {
+            "type": "number"
+        },
+        "number": {
+            "type": "string"
+        },
+        "allow_adjustment": {
+            "type": "boolean",
+            "example": 0
+        },
+        "adjustment": {
+            "type": "boolean",
+            "example": 0
+        },
+        "customer_contact_id": {
+            "type": "integer"
+        },
+        "expense_budget_cost": {
+            "type": "string"
+        },
+        "use_half_day_rate": {
+            "type": "integer",
+            "example": 0
+        },
+        "day_rate_hours": {
+            "type": "string"
+        },
+        "day_rate_min_time": {
+            "type": "integer",
+            "example": 90
+        },
+        "project_application_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "day_as_unit": {
+            "type": "integer",
+            "example": 0
+        },
+        "day_as_unit_hours": {
+            "type": "string"
+        },
+        "use_commission": {
+            "type": "integer",
+            "example": 1
+        },
+        "commission_type": {
+            "type": "integer",
+            "example": 1
+        },
+        "commission": {
+            "type": "string"
+        },
+        "customer_contact_name": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "number_format": {
+                    "type": "object",
+                    "properties": {
+                        "thousands_sep": {
+                            "type": "string"
+                        },
+                        "dec_point": {
+                            "type": "string"
+                        },
+                        "places": {
+                            "type": "integer",
+                            "example": 2
+                        }
+                    }
+                },
+                "currency_id": {
+                    "type": "integer",
+                    "example": 840
+                },
+                "precision": {
+                    "type": "integer",
+                    "example": 2
+                }
+            }
+        },
+        "document_category_name": {
+            "type": "string"
+        },
+        "manager_name": {
+            "type": "string"
+        },
+        "custom_fields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "example": {
+                    "id": 146,
+                    "name": "project custom field 1",
+                    "value": "value 1"
+                }
+            }
+        },
+        "billing_method_name": {
+            "type": "string"
+        },
+        "budget_method_name": {
+            "type": "string"
+        },
+        "customer_name": {
+            "type": "string"
+        },
+        "stats": {
+            "type": "object",
+            "example": {
+                "document_category_id": "1",
+                "document_category_name": "active",
+                "is_budgeted": "0",
+                "manager_id": "24597",
+                "document_status_id": "1",
+                "is_dates_set": "0",
+                "logged_hours": "null",
+                "billed_hours": 0,
+                "budget_hours": "0.00",
+                "logged_cost": "null",
+                "budget_cost": "0.00",
+                "staff_cost": "null",
+                "currency_id": "978",
+                "currency_code": "EUR",
+                "currency_symbol": "€",
+                "company_currency_id": "978",
+                "company_currency_code": "EUR",
+                "company_currency_symbol": "€",
+                "is_has_invoices": 0,
+                "invoices": [
+                    101528,
+                    105671
+                ],
+                "start_date_formatted": "null",
+                "end_date_formatted": "null",
+                "currency_format": {
+                    "thousands_sep": ".",
+                    "dec_point": ",",
+                    "places": "2"
+                },
+                "company_currency_format": {
+                    "thousands_sep": ".",
+                    "dec_point": ",",
+                    "places": "2"
+                },
+                "revenue": 0,
+                "draft_billed_hours": 0,
+                "allow_delete": 1,
+                "status": "not_started"
+            }
+        },
+        "is_has_invoices": {
+            "type": "boolean",
+            "example": 0
+        },
+        "is_allowed_update": {
+            "type": "boolean",
+            "example": 1
+        },
+        "time_sheets": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "example": {
+                    "id": "6180",
+                    "log_date": "2018-01-31",
+                    "hours": "1.000",
+                    "task_id": "40",
+                    "task_group_id": "12",
+                    "task_name": "some task",
+                    "group_name": "Group 1",
+                    "user_id": "1",
+                    "user_name": "John Due",
+                    "document_status_id": "1",
+                    "document_status_name": "unbilled",
+                    "notes": "",
+                    "log_date_formatted": "31.01.2018"
+                }
+            }
+        },
+        "tasks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "example": {
+                    "id": 1478,
+                    "task_id": "40",
+                    "task_name": "some task",
+                    "group_id": "12",
+                    "group_name": "Group 1",
+                    "rate": "147.000",
+                    "default_rate": "10.00",
+                    "budget": "0.00",
+                    "position": "1",
+                    "is_done": 0,
+                    "billable": "1",
+                    "allow_delete": "0",
+                    "is_billable_editable": "1",
+                    "logged_hours": "1.000",
+                    "billed_hours": "0.000"
+                }
+            }
+        },
+        "groups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "example": {
+                    "task_id": "40",
+                    "task_name": "some task",
+                    "group_id": "12",
+                    "group_name": "Group 1",
+                    "rate": "147.000",
+                    "default_rate": "10.00",
+                    "budget": "0.00",
+                    "position": "1",
+                    "billable": "1",
+                    "allow_delete": "0",
+                    "is_billable_editable": "1",
+                    "logged_hours": "1.000",
+                    "billed_hours": "0.000"
+                }
+            }
+        },
+        "users": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "example": {
+                    "id": "24597",
+                    "user_id": "24597",
+                    "user_name": "Anetta Siterman",
+                    "rate": "0.000",
+                    "default_rate": "15.258",
+                    "role": "admin",
+                    "is_owner": "0",
+                    "budget": "0.00",
+                    "commission": "22.58",
+                    "position": "",
+                    "presence_status": "offline",
+                    "timer_status": "NOT_ACTIVE",
+                    "has_logo": "0",
+                    "allow_delete": "1",
+                    "logged_this_month": "0.000",
+                    "logged_last_month": "0.000",
+                    "gravatar_url": "https://www.gravatar.com/avatar/5421ae84528ff4964f2072bce9d37561?s=100&d=https://app.zistemo.com/static/images/def_mobile_avatar.png&r=g",
+                    "timer_object": "null"
+                }
+            }
+        }
+    }
+}

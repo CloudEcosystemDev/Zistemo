@@ -1,0 +1,140 @@
+{
+    "type": "array",
+    "description": "Units",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 1883
+            },
+            "project_name": {
+                "type": "string"
+            },
+            "document_category_id": {
+                "type": "integer",
+                "example": 1
+            },
+            "document_category_name": {
+                "type": "string"
+            },
+            "customer_id": {
+                "type": "integer",
+                "example": 133
+            },
+            "customer_name": {
+                "type": "string"
+            },
+            "billing_method_id": {
+                "type": "integer",
+                "example": 2
+            },
+            "billing_method_name": {
+                "type": "string"
+            },
+            "project_budget_id": {
+                "type": "integer",
+                "example": 0
+            },
+            "budget_method_name": {
+                "type": "string"
+            },
+            "start_date": {
+                "type": "string"
+            },
+            "end_date": {
+                "type": "string"
+            },
+            "is_budgeted": {
+                "type": "boolean",
+                "example": 0
+            },
+            "is_dates_set": {
+                "type": "boolean"
+            },
+            "logged_hours": {
+                "type": "number"
+            },
+            "billed_hours": {
+                "type": "number",
+                "example": 0
+            },
+            "budget_hours": {
+                "type": "number"
+            },
+            "logged_cost": {
+                "type": "number"
+            },
+            "budget_cost": {
+                "type": "number"
+            },
+            "staff_cost": {
+                "type": "number"
+            },
+            "currency_code": {
+                "type": "string"
+            },
+            "currency_symbol": {
+                "type": "string"
+            },
+            "company_currency_code": {
+                "type": "string"
+            },
+            "company_currency_symbol": {
+                "type": "string"
+            },
+            "is_has_invoices": {
+                "type": "number",
+                "example": 1
+            },
+            "invoices": {
+                "type": "array",
+                "example": [
+                    101027,
+                    171047
+                ],
+                "items": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "start_date_formatted": {
+                "type": "string"
+            },
+            "end_date_formatted": {
+                "type": "string"
+            },
+            "currency_format": {
+                "type": "object",
+                "example": {
+                    "thousands_sep": " ",
+                    "dec_point": ",",
+                    "places": "2"
+                }
+            },
+            "company_currency_format": {
+                "type": "object",
+                "example": {
+                    "thousands_sep": " ",
+                    "dec_point": ",",
+                    "places": "2"
+                }
+            },
+            "revenue": {
+                "type": "number",
+                "example": 0
+            },
+            "draft_billed_hours": {
+                "type": "number",
+                "example": 0
+            },
+            "status": {
+                "type": "string"
+            },
+            "allow_delete": {
+                "type": "number",
+                "example": 0
+            }
+        }
+    }
+}

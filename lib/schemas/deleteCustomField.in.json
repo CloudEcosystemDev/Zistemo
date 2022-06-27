@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "client",
+                "project"
+            ]
+        },
+        "id": {
+            "required": true,
+            "type": "integer"
+        }
+    }
+}

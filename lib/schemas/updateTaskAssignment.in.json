@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "array",
+            "items": {
+                "title": "Task assignment",
+                "type": "object",
+                "properties": {
+                    "task_id": {
+                        "type": "integer",
+                        "example": 253868
+                    },
+                    "group_id": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "assigned_staff": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "1": 1,
+                                "239": 0
+                            }
+                        ],
+                        "items": {}
+                    }
+                }
+            }
+        }
+    }
+}

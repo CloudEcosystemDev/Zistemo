@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name",
+                    "type": "string"
+                },
+                "rate": {
+                    "description": "Tax rate",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "rate"
+            ]
+        }
+    }
+}

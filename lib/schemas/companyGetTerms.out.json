@@ -1,0 +1,23 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 2
+            },
+            "name": {
+                "type": "string"
+            },
+            "days": {
+                "type": "integer",
+                "example": 0
+            },
+            "editable": {
+                "type": "integer",
+                "example": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 1036
+        },
+        "user_id": {
+            "type": "integer",
+            "example": 123
+        },
+        "log_date": {
+            "type": "string"
+        },
+        "project_id": {
+            "type": "integer",
+            "example": 444
+        },
+        "task_group_id": {
+            "type": "integer",
+            "example": 777
+        },
+        "task_id": {
+            "type": "integer",
+            "example": 674
+        },
+        "hours": {
+            "type": "number",
+            "example": 1
+        },
+        "notes": {
+            "type": "string"
+        },
+        "billed": {
+            "type": "integer",
+            "example": 0
+        },
+        "payed": {
+            "type": "integer",
+            "example": 0
+        },
+        "document_status_id": {
+            "type": "integer",
+            "example": 1
+        },
+        "start_time": {
+            "type": "string"
+        },
+        "stop_time": {
+            "type": "string"
+        },
+        "cost": {
+            "type": "number",
+            "example": 17.83
+        },
+        "created": {
+            "type": "string"
+        },
+        "modified": {
+            "type": "string"
+        },
+        "adjustment": {
+            "type": "integer",
+            "example": 0
+        },
+        "is_timer_record": {
+            "type": "integer",
+            "example": 0
+        },
+        "lat": {
+            "type": "number",
+            "example": 5.1234
+        },
+        "lng": {
+            "type": "number",
+            "example": 7.9876
+        },
+        "time_zone_id": {
+            "type": "integer",
+            "example": 4
+        },
+        "project_schedule_id": {
+            "type": "integer",
+            "example": 123
+        },
+        "projectName": {
+            "type": "string"
+        },
+        "taskName": {
+            "type": "string"
+        },
+        "userName": {
+            "type": "string"
+        },
+        "groupName": {
+            "type": "string"
+        },
+        "documentStatusName": {
+            "type": "string"
+        },
+        "customer_name": {
+            "type": "string"
+        },
+        "customer_id": {
+            "type": "integer",
+            "example": 0
+        },
+        "log_date_formatted": {
+            "type": "string"
+        },
+        "start_time_formatted": {
+            "type": "string"
+        },
+        "stop_time_formatted": {
+            "type": "string"
+        },
+        "is_done": {
+            "type": "integer",
+            "example": 0
+        },
+        "allow_edit": {
+            "type": "integer",
+            "example": 1
+        }
+    }
+}

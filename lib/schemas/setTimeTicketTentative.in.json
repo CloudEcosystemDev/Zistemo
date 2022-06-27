@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "integer",
+            "format": "int64",
+            "minimum": 1,
+            "pattern": "[\\d]+"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "description": "Allowed values: 0 or 1",
+                    "type": "integer",
+                    "format": "int64",
+                    "minimum": 0,
+                    "pattern": "[\\d]+"
+                }
+            },
+            "required": [
+                "value"
+            ]
+        }
+    }
+}

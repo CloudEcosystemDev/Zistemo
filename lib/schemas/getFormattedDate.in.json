@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "dates[one]": {
+                    "description": "In format 'Y-m-d' (2019-01-01)",
+                    "type": "string"
+                },
+                "dates[two]": {
+                    "description": "In format 'Y-m-d' (2019-01-02)",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dates[one]"
+            ]
+        }
+    }
+}

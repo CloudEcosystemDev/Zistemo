@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "user_id": {
+            "type": "integer"
+        },
+        "leave_type_id": {
+            "type": "integer"
+        },
+        "leave_start_date": {
+            "type": "string"
+        },
+        "leave_start": {
+            "type": "string"
+        },
+        "leave_start_type": {
+            "type": "integer"
+        },
+        "leave_end_date": {
+            "type": "string"
+        },
+        "leave_end": {
+            "type": "string"
+        },
+        "leave_end_type": {
+            "type": "integer"
+        },
+        "approval_status": {
+            "type": "integer"
+        },
+        "replacement_user_id": {
+            "type": "integer"
+        },
+        "replacement_confirmation": {
+            "type": "integer"
+        },
+        "note": {
+            "type": "string"
+        },
+        "working_days": {
+            "type": "number"
+        },
+        "calendar_days": {
+            "type": "number"
+        },
+        "approval_user_id": {
+            "type": "integer"
+        },
+        "is_reminder_sent": {
+            "type": "integer"
+        },
+        "has_document": {
+            "type": "integer"
+        },
+        "leave_type_name": {
+            "type": "string"
+        },
+        "approval_status_name": {
+            "type": "string"
+        },
+        "user_name": {
+            "type": "string"
+        },
+        "user_email": {
+            "type": "string"
+        },
+        "replacement_user_name": {
+            "type": "string"
+        },
+        "replacement_user_email": {
+            "type": "string"
+        },
+        "approval_user_name": {
+            "type": "string"
+        },
+        "approval_user_email": {
+            "type": "string"
+        }
+    }
+}

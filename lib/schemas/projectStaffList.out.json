@@ -1,0 +1,22 @@
+{
+    "type": "array",
+    "items": {
+        "title": "User",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 602
+            },
+            "role": {
+                "type": "string"
+            },
+            "user_name": {
+                "type": "string"
+            },
+            "rate": {
+                "type": "number"
+            }
+        }
+    }
+}

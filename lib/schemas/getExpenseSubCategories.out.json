@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 41
+        },
+        "name": {
+            "type": "string"
+        },
+        "is_asset": {
+            "type": "integer",
+            "example": 0
+        },
+        "self_created": {
+            "type": "integer",
+            "example": 0
+        },
+        "has_active_sub_categories": {
+            "type": "integer",
+            "example": 0
+        },
+        "parent_category": {
+            "type": "object"
+        },
+        "sub_categories": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 41
+                    },
+                    "parent_id": {
+                        "type": "integer",
+                        "example": 39
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "is_asset": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "self_created": {
+                        "type": "integer",
+                        "example": 0
+                    },
+                    "parent_category": {
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    }
+}

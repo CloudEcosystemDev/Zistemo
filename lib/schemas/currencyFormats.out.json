@@ -1,0 +1,16 @@
+{
+    "type": "array",
+    "description": "Units",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer",
+                "example": 1
+            },
+            "format": {
+                "type": "string"
+            }
+        }
+    }
+}

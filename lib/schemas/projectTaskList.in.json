@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "exclude_used": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

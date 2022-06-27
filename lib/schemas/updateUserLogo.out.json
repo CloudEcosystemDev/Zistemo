@@ -1,0 +1,73 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "example": 239
+        },
+        "first_name": {
+            "type": "string"
+        },
+        "last_name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "has_logo": {
+            "type": "boolean",
+            "example": true
+        },
+        "role": {
+            "type": "string"
+        },
+        "active": {
+            "type": "string"
+        },
+        "position": {
+            "type": "string"
+        },
+        "timer_status": {
+            "type": "string"
+        },
+        "timer_object": {
+            "type": "object",
+            "properties": {
+                "project_id": {
+                    "type": "string"
+                },
+                "task_id": {
+                    "type": "string"
+                },
+                "customer_id": {
+                    "type": "string"
+                },
+                "start_time": {
+                    "type": "string"
+                },
+                "customer_name": {
+                    "type": "string"
+                },
+                "projectName": {
+                    "type": "string"
+                },
+                "taskName": {
+                    "type": "string"
+                },
+                "paused": {
+                    "type": "string"
+                },
+                "hours": {
+                    "type": "number",
+                    "example": 0.01
+                },
+                "start_time_formatted": {
+                    "type": "string"
+                }
+            }
+        },
+        "gravatar_url": {
+            "type": "string"
+        }
+    }
+}
